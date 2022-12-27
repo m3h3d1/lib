@@ -467,5 +467,3 @@ using namespace Nyaan; void Nyaan::solve() {
   inl(N);
   out(prime_counting(N));
 }
-
-// skdjb
