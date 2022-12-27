@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: update
-      run: sudo apt-get update
+#     - name: update
+#       run: sudo apt-get update
     
     - uses: actions/checkout@v1
 
@@ -24,10 +24,10 @@ jobs:
 #       uses: actions/setup-haskell@v1
 
     # required only if you want to verify Java code
-    - name: Install dependencies (Java)
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
+#     - name: Install dependencies (Java)
+#       uses: actions/setup-java@v1
+#       with:
+#         java-version: 11
 
     # required only if you want to verify C# script files
 #     - uses: actions/setup-dotnet@v1
@@ -47,28 +47,6 @@ jobs:
     # required only if you want to verify Nim code
 #     - name: Install dependencies (Nim)
 #      run: sudo apt-get install nim
-
-    - name: Set up Rust (1.42.0)
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: 1.42.0-x86_64-unknown-linux-gnu
-        default: true
-        profile: minimal
-
-    # required by cargo-udeps
-    - name: Set up Rust (nightly)
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: nightly-x86_64-unknown-linux-gnu
-        default: true
-        profile: minimal
-
-    # required only if you set `languages.rust.list_dependencies_backend.kind` to `"cargo-udeps"`
-    - name: Install cargo-udeps for Rust
-      uses: actions-rs/install@v0.1
-      with:
-        crate: cargo-udeps
-        use-tool-cache: true
 
     - name: Run tests
       env:
