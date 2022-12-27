@@ -8,8 +8,7 @@ jobs:
     
     steps:
     - name: update
-      run: sudo upgrade
-            sudo update
+      run: sudo apt-get update
     
     - uses: actions/checkout@v1
 
