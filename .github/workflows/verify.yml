@@ -46,7 +46,7 @@ jobs:
 
     # required only if you want to verify Nim code
     - name: Install dependencies (Nim)
-      run: sudo apt install nim
+      run: sudo apt-get install nim
 
     - name: Set up Rust (1.42.0)
       uses: actions-rs/toolchain@v1
