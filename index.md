@@ -3,18 +3,18 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: ds/union-find.hpp
       title: ds/union-find.hpp
   - name: template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
   - name: test/yosupo/ds
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/ds/Unionfind.test.cpp
       title: test/yosupo/ds/Unionfind.test.cpp
   - name: .
