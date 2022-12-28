@@ -4,6 +4,9 @@ data:
   - icon: ':x:'
     path: segtree/acl_segtree.hpp
     title: segtree/acl_segtree.hpp
+  - icon: ':question:'
+    path: template/template.hpp
+    title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -24,27 +27,24 @@ data:
     \ of include guard\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ segtree/acl_segtree.hpp: line 37: found codes out of include guard\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
-    \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
-    \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
-    \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
-    const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) {\n\treturn\
-    \ max(a, b);\n}\n\nint e() {\n\treturn -1;\n}\n\nint target;\nint f(int v) {\n\
-    \treturn v < target;\n}\n\nint main() {\n    ios_base::sync_with_stdio(0);\n \
-    \   int n, q;\n    cin>>n>>q;\n    vector<int> A(n);\n    for(int i=0; i<n; ++i)\
-    \ {\n    \tcin>>A[i];\n    }\n    atcoder::segtree<int, op, e> seg(A);\n\n   \
-    \ while(q--) {\n    \tint typ;\n    \tcin>>typ;\n    \tif(typ == 1) {\n    \t\t\
-    int id, val;\n    \t\tcin>>id>>val;\n    \t\tid--;\n    \t\tseg.set(id, val);\n\
-    \    \t} else if(typ == 2) {\n    \t\tint l, r;\n    \t\tcin>>l>>r;\n    \t\t\
-    l--;\n    \t\tcout<<seg.prod(l, r)<<en;\n    \t} else if(typ == 3) {\n    \t\t\
-    int p;\n    \t\tcin>>p>>target;\n    \t\tp--;\n    \t\tcout<<seg.max_right(p,\
-    \ f)+1<<en;\n    \t}\n    }\n    return 0;\n}"
+    \n\n#include \"../../template/template.hpp\"\n#include \"../acl_segtree.hpp\"\n\
+    \nint op(int a, int b) {\n\treturn max(a, b);\n}\n\nint e() {\n\treturn -1;\n\
+    }\n\nint target;\nint f(int v) {\n\treturn v < target;\n}\n\nint main() {\n  \
+    \  ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n    vector<int>\
+    \ A(n);\n    for(int i=0; i<n; ++i) {\n    \tcin>>A[i];\n    }\n    atcoder::segtree<int,\
+    \ op, e> seg(A);\n\n    while(q--) {\n    \tint typ;\n    \tcin>>typ;\n    \t\
+    if(typ == 1) {\n    \t\tint id, val;\n    \t\tcin>>id>>val;\n    \t\tid--;\n \
+    \   \t\tseg.set(id, val);\n    \t} else if(typ == 2) {\n    \t\tint l, r;\n  \
+    \  \t\tcin>>l>>r;\n    \t\tl--;\n    \t\tcout<<seg.prod(l, r)<<en;\n    \t} else\
+    \ if(typ == 3) {\n    \t\tint p;\n    \t\tcin>>p>>target;\n    \t\tp--;\n    \t\
+    \tcout<<seg.max_right(p, f)+1<<en;\n    \t}\n    }\n    return 0;\n}"
   dependsOn:
+  - template/template.hpp
   - segtree/acl_segtree.hpp
   isVerificationFile: true
   path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 04:33:13+06:00'
+  timestamp: '2022-12-29 04:40:38+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp

@@ -6,9 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: ds/test/yosupo_unionfind.test.cpp
     title: ds/test/yosupo_unionfind.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: segtree/test/atcoder_Segment-Tree.test.cpp
+    title: segtree/test/atcoder_Segment-Tree.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: '#line 1 "template/template.hpp"
@@ -68,9 +71,10 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2022-12-29 04:14:56+06:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - ds/test/yosupo_unionfind.test.cpp
+  - segtree/test/atcoder_Segment-Tree.test.cpp
 documentation_of: template/template.hpp
 layout: document
 redirect_from:
