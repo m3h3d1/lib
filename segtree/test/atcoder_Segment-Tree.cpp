@@ -1,3 +1,5 @@
+#define PROBLEM "https://atcoder.jp/contests/practice2/tasks/practice2_j"
+
 #include <bits/stdc++.h>
 using namespace std;
 #include "../acl_segtree.hpp"
