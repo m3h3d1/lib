@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/persistent_unionfind"
+#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
 #include "../../../template/template.hpp"
 #include "../../../ds/union-find.hpp"
