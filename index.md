@@ -1,7 +1,22 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: ds
+    pages:
+    - icon: ':x:'
+      path: ds/union-find.hpp
+      title: ds/union-find.hpp
+  - name: template
+    pages:
+    - icon: ':x:'
+      path: template/template.hpp
+      title: template/template.hpp
   verificationCategories:
+  - name: test/yosupo/ds
+    pages:
+    - icon: ':x:'
+      path: test/yosupo/ds/Unionfind.test.cpp
+      title: test/yosupo/ds/Unionfind.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
