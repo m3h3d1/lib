@@ -28,11 +28,7 @@ struct DSU {
 	}
 };
 
-/**tcT> T kruskal(int N, vector<pair<T,pi>> ed) {
-	sort(all(ed));
-	T ans = 0; DSU D; D.init(N); // edges that unite are in MST
-	each(a,ed) if (D.unite(a.s.f,a.s.s)) ans += a.f; 
-	return ans;
-}*/
-
-// https://usaco.guide/gold/dsu?lang=cpp#implementation
+/**
+ * @brief Union Find
+ * @docs docs/ds/union-find.md
+ */
