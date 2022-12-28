@@ -1,4 +1,5 @@
 #pragma once
+
 /**
  * Description: Disjoint Set Union with path compression
  	* and union by size. Add edges and test connectivity. 
