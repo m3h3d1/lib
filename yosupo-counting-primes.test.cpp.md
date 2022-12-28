@@ -9,7 +9,6 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/counting_primes
-    _deprecated_at_docs: docs/multiplicative-function/prime-counting.md
     document_title: "\u7D20\u6570\u30AB\u30A6\u30F3\u30C8( $\\mathrm{O}(\\frac{N^{\\\
       frac{3}{4}}}{\\log N})$ )"
     links:
@@ -160,10 +159,9 @@ data:
     \ h[i * x <= sq ? i * x : nsz - n / x] - pi;\n  }\n  return {ns, h};\n}\n\nlong\
     \ long prime_counting(long long N) {\n  if (N < 2) return 0;\n  return pi_table(N).second[1];\n\
     }\n\n/**\n * @brief \u7D20\u6570\u30AB\u30A6\u30F3\u30C8( $\\mathrm{O}(\\frac{N^{\\\
-    frac{3}{4}}}{\\log N})$ )\n * @docs docs/multiplicative-function/prime-counting.md\n\
-    \ */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\n\n\
-    using namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
-    }\n\n// kjkj\n"
+    frac{3}{4}}}{\\log N})$ )\n */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\
+    \n\nusing namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
+    }\n\n// h\n"
   code: "#line 1 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/counting_primes\"\n\n#line 2 \"template/template.hpp\"\
     \nusing namespace std;\n\n// intrinstic\n#include <immintrin.h>\n\n#include <algorithm>\n\
@@ -310,15 +308,14 @@ data:
     \ h[i * x <= sq ? i * x : nsz - n / x] - pi;\n  }\n  return {ns, h};\n}\n\nlong\
     \ long prime_counting(long long N) {\n  if (N < 2) return 0;\n  return pi_table(N).second[1];\n\
     }\n\n/**\n * @brief \u7D20\u6570\u30AB\u30A6\u30F3\u30C8( $\\mathrm{O}(\\frac{N^{\\\
-    frac{3}{4}}}{\\log N})$ )\n * @docs docs/multiplicative-function/prime-counting.md\n\
-    \ */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\n\n\
-    using namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
-    }\n\n// kjkj"
+    frac{3}{4}}}{\\log N})$ )\n */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\
+    \n\nusing namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
+    }\n\n// h"
   dependsOn: []
   isVerificationFile: true
   path: yosupo-counting-primes.test.cpp
   requiredBy: []
-  timestamp: '2022-12-28 02:54:58+06:00'
+  timestamp: '2022-12-29 04:04:20+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo-counting-primes.test.cpp

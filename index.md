@@ -1,32 +1,7 @@
 ---
 data:
-  libraryCategories:
-  - name: ds
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: ds/union-find.hpp
-      title: Union Find
-  - name: segtree
-    pages:
-    - icon: ':warning:'
-      path: segtree/acl_segtree.hpp
-      title: segtree/acl_segtree.hpp
-  - name: segtree/test
-    pages:
-    - icon: ':warning:'
-      path: segtree/test/atcoder_Segment-Tree.cpp
-      title: segtree/test/atcoder_Segment-Tree.cpp
-  - name: template
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: template/template.hpp
-      title: template/template.hpp
+  libraryCategories: []
   verificationCategories:
-  - name: ds/test
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: ds/test/yosupo_unionfind.test.cpp
-      title: ds/test/yosupo_unionfind.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
