@@ -55,5 +55,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
-        DROPBOX_TOKEN: DeoaS_zQDTUAAAAAAAAADqX95A8cdaTJaMjl3q_U1kk
+        DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
       run: oj-verify all
