@@ -1,3 +1,4 @@
+#pragma once
 /**
  * Description: Disjoint Set Union with path compression
  	* and union by size. Add edges and test connectivity. 
@@ -6,7 +7,6 @@
  * Source: CSAcademy, KACTL
  * Verification: *
  */
-#pragma once
 
 struct DSU {
 	vector<int> e;

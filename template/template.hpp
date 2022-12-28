@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
+#pragma once
+
+#include<bits/stdc++.h>
 using namespace std;
+
 #define ff first
 #define ss second
 #define pb push_back
