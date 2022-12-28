@@ -23,7 +23,7 @@ data:
     \ ss second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int>\
     \ pii;\n#define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\"\
     : \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = 1e9+7;\n\
-    const int N = 1e6+9;\n#line 2 \"ds/union-find.hpp\"\n/**\n * Description: Disjoint\
+    const int N = 1e6+9;\n#line 2 \"ds/union-find.hpp\"\n\n/**\n * Description: Disjoint\
     \ Set Union with path compression\n \t* and union by size. Add edges and test\
     \ connectivity. \n \t* Use for Kruskal's or Boruvka's minimum spanning tree.\n\
     \ * Time: O(\\alpha(N))\n * Source: CSAcademy, KACTL\n * Verification: *\n */\n\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/ds/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-12-28 14:46:40+06:00'
+  timestamp: '2022-12-28 14:55:33+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/ds/Unionfind.test.cpp
