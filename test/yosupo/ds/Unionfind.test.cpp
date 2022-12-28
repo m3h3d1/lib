@@ -13,7 +13,7 @@ int main() {
     	if(typ==0) {
     		dsu.unite(u, v);
     	} else {
-    		cout<<dsu.same_set(u, v)<<en;
+    		cout<<dsu.same_set(u, v)<<'\n';
     	}
     }
     return 0;

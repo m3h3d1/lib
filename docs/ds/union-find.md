@@ -8,7 +8,7 @@
 Description: Disjoint Set Union with path compression
 	and union by size. Add edges and test connectivity. 
 	Use for Kruskal's or Boruvka's minimum spanning tree.
-Time: O(\alpha(N))
+Time: $\mathrm{O}(\alpha(N))$
 
 https://usaco.guide/gold/dsu
 
