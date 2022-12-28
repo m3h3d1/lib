@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: ds/union-find.hpp
-      title: ds/union-find.hpp
+      title: Union Find
   - name: template
     pages:
     - icon: ':heavy_check_mark:'

@@ -10,8 +10,9 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    links:
-    - https://usaco.guide/gold/dsu?lang=cpp#implementation
+    _deprecated_at_docs: docs/ds/union-find.md
+    document_title: Union Find
+    links: []
   bundledCode: "#line 2 \"ds/union-find.hpp\"\n\n/**\n * Description: Disjoint Set\
     \ Union with path compression\n \t* and union by size. Add edges and test connectivity.\
     \ \n \t* Use for Kruskal's or Boruvka's minimum spanning tree.\n * Time: O(\\\
@@ -22,9 +23,7 @@ data:
     \ }\n\n\tint size(int x) { return -e[get(x)]; }\n\n\tbool unite(int x, int y)\
     \ {  // union by size\n\t\tx = get(x), y = get(y);\n\t\tif (x == y) return false;\n\
     \t\tif (e[x] > e[y]) swap(x, y);\n\t\te[x] += e[y]; e[y] = x; return true;\n\t\
-    }\n};\n\n/**tcT> T kruskal(int N, vector<pair<T,pi>> ed) {\n\tsort(all(ed));\n\
-    \tT ans = 0; DSU D; D.init(N); // edges that unite are in MST\n\teach(a,ed) if\
-    \ (D.unite(a.s.f,a.s.s)) ans += a.f; \n\treturn ans;\n}*/\n\n// https://usaco.guide/gold/dsu?lang=cpp#implementation\n"
+    }\n};\n\n/**\n * @brief Union Find\n * @docs docs/ds/union-find.md\n */\n"
   code: "#pragma once\n\n/**\n * Description: Disjoint Set Union with path compression\n\
     \ \t* and union by size. Add edges and test connectivity. \n \t* Use for Kruskal's\
     \ or Boruvka's minimum spanning tree.\n * Time: O(\\alpha(N))\n * Source: CSAcademy,\
@@ -34,15 +33,13 @@ data:
     \n\tbool same_set(int a, int b) { return get(a) == get(b); }\n\n\tint size(int\
     \ x) { return -e[get(x)]; }\n\n\tbool unite(int x, int y) {  // union by size\n\
     \t\tx = get(x), y = get(y);\n\t\tif (x == y) return false;\n\t\tif (e[x] > e[y])\
-    \ swap(x, y);\n\t\te[x] += e[y]; e[y] = x; return true;\n\t}\n};\n\n/**tcT> T\
-    \ kruskal(int N, vector<pair<T,pi>> ed) {\n\tsort(all(ed));\n\tT ans = 0; DSU\
-    \ D; D.init(N); // edges that unite are in MST\n\teach(a,ed) if (D.unite(a.s.f,a.s.s))\
-    \ ans += a.f; \n\treturn ans;\n}*/\n\n// https://usaco.guide/gold/dsu?lang=cpp#implementation"
+    \ swap(x, y);\n\t\te[x] += e[y]; e[y] = x; return true;\n\t}\n};\n\n/**\n * @brief\
+    \ Union Find\n * @docs docs/ds/union-find.md\n */"
   dependsOn: []
   isVerificationFile: false
   path: ds/union-find.hpp
   requiredBy: []
-  timestamp: '2022-12-28 14:55:33+06:00'
+  timestamp: '2022-12-28 15:35:09+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/ds/Unionfind.test.cpp
@@ -51,5 +48,20 @@ layout: document
 redirect_from:
 - /library/ds/union-find.hpp
 - /library/ds/union-find.hpp.html
-title: ds/union-find.hpp
+title: Union Find
 ---
+## Union-Find Tree(Disjoint Set Union)
+
+#### overview
+
+- Joins two subsets into a single subset.
+- Check if vertices $x, y$ belongs to the same set.
+
+Description: Disjoint Set Union with path compression
+	and union by size. Add edges and test connectivity. 
+	Use for Kruskal's or Boruvka's minimum spanning tree.
+Time: O(\alpha(N))
+
+https://usaco.guide/gold/dsu
+
+#### Usage

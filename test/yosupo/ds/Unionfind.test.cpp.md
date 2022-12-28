@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: ds/union-find.hpp
-    title: ds/union-find.hpp
+    title: Union Find
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
@@ -33,14 +33,12 @@ data:
     \ get(a) == get(b); }\n\n\tint size(int x) { return -e[get(x)]; }\n\n\tbool unite(int\
     \ x, int y) {  // union by size\n\t\tx = get(x), y = get(y);\n\t\tif (x == y)\
     \ return false;\n\t\tif (e[x] > e[y]) swap(x, y);\n\t\te[x] += e[y]; e[y] = x;\
-    \ return true;\n\t}\n};\n\n/**tcT> T kruskal(int N, vector<pair<T,pi>> ed) {\n\
-    \tsort(all(ed));\n\tT ans = 0; DSU D; D.init(N); // edges that unite are in MST\n\
-    \teach(a,ed) if (D.unite(a.s.f,a.s.s)) ans += a.f; \n\treturn ans;\n}*/\n\n//\
-    \ https://usaco.guide/gold/dsu?lang=cpp#implementation\n#line 5 \"test/yosupo/ds/Unionfind.test.cpp\"\
-    \n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n\
-    \    cin>>n>>q;\n    DSU dsu(n);\n    while(q--) {\n    \tcin>>typ>>u>>v;\n  \
-    \  \tif(typ==0) {\n    \t\tdsu.unite(u, v);\n    \t} else {\n    \t\tcout<<dsu.same_set(u,\
-    \ v)<<en;\n    \t}\n    }\n    return 0;\n}\n"
+    \ return true;\n\t}\n};\n\n/**\n * @brief Union Find\n * @docs docs/ds/union-find.md\n\
+    \ */\n#line 5 \"test/yosupo/ds/Unionfind.test.cpp\"\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \    int n, q, typ, u, v;\n    cin>>n>>q;\n    DSU dsu(n);\n    while(q--) {\n\
+    \    \tcin>>typ>>u>>v;\n    \tif(typ==0) {\n    \t\tdsu.unite(u, v);\n    \t}\
+    \ else {\n    \t\tcout<<dsu.same_set(u, v)<<en;\n    \t}\n    }\n    return 0;\n\
+    }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
     \ \"../../../template/template.hpp\"\n#include \"../../../ds/union-find.hpp\"\n\
     \nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n\
@@ -53,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/ds/Unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-12-28 14:55:33+06:00'
+  timestamp: '2022-12-28 15:35:09+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/ds/Unionfind.test.cpp
