@@ -4,3 +4,4 @@ plugins:
 - jekyll-redirect-from
 theme: jekyll-theme-hacker
 title: 📈Library
+favicon: favicon.ico
