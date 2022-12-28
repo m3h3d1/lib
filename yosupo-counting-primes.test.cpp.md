@@ -161,7 +161,7 @@ data:
     }\n\n/**\n * @brief \u7D20\u6570\u30AB\u30A6\u30F3\u30C8( $\\mathrm{O}(\\frac{N^{\\\
     frac{3}{4}}}{\\log N})$ )\n */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\
     \n\nusing namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
-    }\n\n// h\n"
+    }\n"
   code: "#line 1 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/counting_primes\"\n\n#line 2 \"template/template.hpp\"\
     \nusing namespace std;\n\n// intrinstic\n#include <immintrin.h>\n\n#include <algorithm>\n\
@@ -310,12 +310,12 @@ data:
     }\n\n/**\n * @brief \u7D20\u6570\u30AB\u30A6\u30F3\u30C8( $\\mathrm{O}(\\frac{N^{\\\
     frac{3}{4}}}{\\log N})$ )\n */\n#line 5 \"verify/verify-yosupo-math/yosupo-counting-primes.test.cpp\"\
     \n\nusing namespace Nyaan; void Nyaan::solve() {\n  inl(N);\n  out(prime_counting(N));\n\
-    }\n\n// h"
+    }\n"
   dependsOn: []
   isVerificationFile: true
   path: yosupo-counting-primes.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 04:04:20+06:00'
+  timestamp: '2022-12-29 04:14:56+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo-counting-primes.test.cpp
