@@ -19,6 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: pip3 install -U online-judge-verify-helper
+      run: pip3 install -U online-judge-tools online-judge-api-client
 
 
     # required only if you want to verify Haskell code
