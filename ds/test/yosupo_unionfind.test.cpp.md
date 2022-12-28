@@ -23,8 +23,8 @@ data:
     \ second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int> pii;\n\
     #define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\": \"<<#x<<\"\
     \ = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = 1e9+7;\nconst int\
-    \ N = 1e6+9;\n#line 2 \"ds/union-find.hpp\"\n\nstruct DSU {\n\tvector<int> e;\n\
-    \tDSU(int n) { e = vector<int>(n, -1); }\n\n\t// get representive component (uses\
+    \ N = 1e6+9;\n#line 1 \"ds/union-find.hpp\"\nstruct DSU {\n\tvector<int> e;\n\t\
+    DSU(int n) { e = vector<int>(n, -1); }\n\n\t// get representive component (uses\
     \ path compression)\n\tint get(int x) { return e[x] < 0 ? x : e[x] = get(e[x]);\
     \ }\n\n\tbool same_set(int a, int b) { return get(a) == get(b); }\n\n\tint size(int\
     \ x) { return -e[get(x)]; }\n\n\tbool unite(int x, int y) {  // union by size\n\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: ds/test/yosupo_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 04:14:56+06:00'
+  timestamp: '2022-12-29 04:24:58+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: ds/test/yosupo_unionfind.test.cpp

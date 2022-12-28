@@ -22,7 +22,7 @@ data:
     \ of include guard\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ segtree/acl_segtree.hpp: line 37: found codes out of include guard\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
+    \n\n#include <bits/stdc++.h>\nusing namespace std;\n\n#include \"../acl_segtree.hpp\"\
     \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
@@ -42,7 +42,7 @@ data:
   isVerificationFile: false
   path: segtree/test/atcoder_Segment-Tree.cpp
   requiredBy: []
-  timestamp: '2022-12-29 04:14:56+06:00'
+  timestamp: '2022-12-29 04:24:58+06:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.cpp
