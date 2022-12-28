@@ -1,15 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: segtree/acl_segtree.hpp
     title: segtree/acl_segtree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://atcoder.jp/contests/practice2/tasks/practice2_j
     links:
     - https://atcoder.jp/contests/practice2/tasks/practice2_j
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -22,8 +24,8 @@ data:
     \ of include guard\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ segtree/acl_segtree.hpp: line 37: found codes out of include guard\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#include <bits/stdc++.h>\nusing namespace std;\n\n#include \"../acl_segtree.hpp\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
+    \n\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
+    \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
     const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) {\n\treturn\
@@ -39,16 +41,16 @@ data:
     \ f)+1<<en;\n    \t}\n    }\n    return 0;\n}"
   dependsOn:
   - segtree/acl_segtree.hpp
-  isVerificationFile: false
-  path: segtree/test/atcoder_Segment-Tree.cpp
+  isVerificationFile: true
+  path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 04:24:58+06:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2022-12-29 04:33:13+06:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: segtree/test/atcoder_Segment-Tree.cpp
+documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp
 layout: document
 redirect_from:
-- /library/segtree/test/atcoder_Segment-Tree.cpp
-- /library/segtree/test/atcoder_Segment-Tree.cpp.html
-title: segtree/test/atcoder_Segment-Tree.cpp
+- /verify/segtree/test/atcoder_Segment-Tree.test.cpp
+- /verify/segtree/test/atcoder_Segment-Tree.test.cpp.html
+title: segtree/test/atcoder_Segment-Tree.test.cpp
 ---

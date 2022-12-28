@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: segtree/test/atcoder_Segment-Tree.cpp
-    title: segtree/test/atcoder_Segment-Tree.cpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: segtree/test/atcoder_Segment-Tree.test.cpp
+    title: segtree/test/atcoder_Segment-Tree.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://atcoder.github.io/ac-library/document_ja/segtree.html
@@ -82,11 +82,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: segtree/acl_segtree.hpp
-  requiredBy:
-  - segtree/test/atcoder_Segment-Tree.cpp
+  requiredBy: []
   timestamp: '2022-12-29 04:14:56+06:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - segtree/test/atcoder_Segment-Tree.test.cpp
 documentation_of: segtree/acl_segtree.hpp
 layout: document
 redirect_from:

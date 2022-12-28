@@ -8,14 +8,9 @@ data:
       title: Union Find
   - name: segtree
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: segtree/acl_segtree.hpp
       title: segtree/acl_segtree.hpp
-  - name: segtree/test
-    pages:
-    - icon: ':warning:'
-      path: segtree/test/atcoder_Segment-Tree.cpp
-      title: segtree/test/atcoder_Segment-Tree.cpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
@@ -27,6 +22,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/test/yosupo_unionfind.test.cpp
       title: ds/test/yosupo_unionfind.test.cpp
+  - name: segtree/test
+    pages:
+    - icon: ':x:'
+      path: segtree/test/atcoder_Segment-Tree.test.cpp
+      title: segtree/test/atcoder_Segment-Tree.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
