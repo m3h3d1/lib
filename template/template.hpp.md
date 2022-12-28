@@ -11,11 +11,13 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: '#line 1 "template/template.hpp"
+  bundledCode: '#line 2 "template/template.hpp"
 
-    #include <bits/stdc++.h>
+
+    #include<bits/stdc++.h>
 
     using namespace std;
+
 
     #define ff first
 
@@ -38,9 +40,13 @@ data:
     const int N = 1e6+9;
 
     '
-  code: '#include <bits/stdc++.h>
+  code: '#pragma once
+
+
+    #include<bits/stdc++.h>
 
     using namespace std;
+
 
     #define ff first
 
@@ -65,7 +71,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2022-12-28 14:37:14+06:00'
+  timestamp: '2022-12-28 14:46:40+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/ds/Unionfind.test.cpp
