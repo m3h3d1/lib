@@ -2,9 +2,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
 #include "../acl_segtree.hpp"
-
 #define ff first
 #define ss second
 #define pb push_back
