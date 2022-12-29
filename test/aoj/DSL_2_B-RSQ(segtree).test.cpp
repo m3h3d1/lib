@@ -1,7 +1,7 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B"
 #include <bits/stdc++.h>
-#include "../../segtree/segtree.hpp"
 using namespace std;
+#include "../../segtree/segtree.hpp"
 
 #define ff first
 #define ss second
@@ -11,11 +11,11 @@ typedef pair<int,int> pii;
 #define all(v) (v).begin(),(v).end()
 #define db(x) cerr<<__LINE__<<": "<<#x<<" = "<<(x)<<'\n'
 const char en = '\n';
-const int inf = INT32_MAX;
+const int inf = 1e9+7;
 const int N = 1e6+9;
 
-int op(int a, int b) { return min(a, b); }
-int e() { return inf; }
+int op(int a, int b) { return a + b; }
+int e() { return 0; }
 
 int main() {
     ios_base::sync_with_stdio(0);
@@ -26,7 +26,7 @@ int main() {
         int typ, x, y;
         cin>>typ>>x>>y;
         if(typ==0) {
-            seg.set(x, y);
+            seg.set(x, seg.get(x) + y);
         } else {
             cout<<seg.prod(x, y+1)<<en;
         }
