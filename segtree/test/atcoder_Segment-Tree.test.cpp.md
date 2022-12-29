@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 18:51:22+06:00'
+  timestamp: '2022-12-29 19:00:35+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp
