@@ -11,7 +11,7 @@ typedef pair<int,int> pii;
 #define all(v) (v).begin(),(v).end()
 #define db(x) cerr<<__LINE__<<": "<<#x<<" = "<<(x)<<'\n'
 const char en = '\n';
-const int inf = 1e9+7;
+const int inf = INT32_MAX;
 const int N = 1e6+9;
 
 int op(int a, int b) { return min(a, b); }
