@@ -19,5 +19,5 @@ struct DSU {
 
 /**
  * @brief Union Find
- * @docs docs/ds/union-find.md
+ * @docs ds/union-find.md
  */
