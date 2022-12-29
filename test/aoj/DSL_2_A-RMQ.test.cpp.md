@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: segtree/segtree.hpp
     title: segtree/segtree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
@@ -60,7 +60,7 @@ data:
     \ 4 \"test/aoj/DSL_2_A-RMQ.test.cpp\"\nusing namespace std;\n\n#define ff first\n\
     #define ss second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int>\
     \ pii;\n#define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\"\
-    : \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = 1e9+7;\n\
+    : \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = INT32_MAX;\n\
     const int N = 1e6+9;\n\nint op(int a, int b) { return min(a, b); }\nint e() {\
     \ return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n,\
     \ q;\n    cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--) {\n\
@@ -72,8 +72,8 @@ data:
     \ std;\n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long\
     \ long ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n\
     #define db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en =\
-    \ '\\n';\nconst int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b)\
-    \ { return min(a, b); }\nint e() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \ '\\n';\nconst int inf = INT32_MAX;\nconst int N = 1e6+9;\n\nint op(int a, int\
+    \ b) { return min(a, b); }\nint e() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
     \    int n, q;\n    cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--)\
     \ {\n        int typ, x, y;\n        cin>>typ>>x>>y;\n        if(typ==0) {\n \
     \           seg.set(x, y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n\
@@ -83,8 +83,8 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_A-RMQ.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 23:09:41+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-12-29 23:17:25+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_A-RMQ.test.cpp
 layout: document

@@ -11,7 +11,7 @@ data:
     - icon: ':warning:'
       path: segtree/acl_segtree.hpp
       title: segtree/acl_segtree.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
   - name: template
@@ -27,7 +27,7 @@ data:
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_A-RMQ.test.cpp
       title: test/aoj/DSL_2_A-RMQ.test.cpp
   - name: .

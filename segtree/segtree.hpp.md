@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_A-RMQ.test.cpp
     title: test/aoj/DSL_2_A-RMQ.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"segtree/segtree.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -100,7 +100,7 @@ data:
   path: segtree/segtree.hpp
   requiredBy: []
   timestamp: '2022-12-29 23:09:41+06:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_A-RMQ.test.cpp
 documentation_of: segtree/segtree.hpp
