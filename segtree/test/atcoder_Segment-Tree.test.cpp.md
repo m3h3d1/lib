@@ -23,8 +23,8 @@ data:
     , line 355, in update\n    raise BundleErrorAt(path, i + 1, \"found codes out\
     \ of include guard\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ segtree/acl_segtree.hpp: line 37: found codes out of include guard\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
+  code: "#include <bits/stdc++.h>\nusing namespace std;\n\n#include \"../acl_segtree.hpp\"\
+    \n\n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
     \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 18:38:53+06:00'
+  timestamp: '2022-12-29 18:51:22+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp
