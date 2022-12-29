@@ -15,7 +15,7 @@ data:
     links:
     - https://atcoder.jp/contests/practice2/tasks/practice2_j
   bundledCode: "#line 1 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n\n#line 2 \"segtree/acl_segtree.hpp\"\n\n#ifndef ATCODER_INTERNAL_BITOP_HPP\n\
+    using namespace std;\n#line 2 \"segtree/acl_segtree.hpp\"\n\n#ifndef ATCODER_INTERNAL_BITOP_HPP\n\
     #define ATCODER_INTERNAL_BITOP_HPP 1\n\n#ifdef _MSC_VER\n#include <intrin.h>\n\
     #endif\n\nnamespace atcoder {\n\nnamespace internal {\n\n// @param n `0 <= n`\n\
     // @return minimum non-negative `x` s.t. `n <= 2**x`\nint ceil_pow2(int n) {\n\
@@ -74,9 +74,9 @@ data:
     // Reference: https://atcoder.github.io/ac-library/document_ja/segtree.html\n\
     /* usage:\nstruct S {\n    long long su;\n    int nb;\n};\nS e() { return {0,\
     \ 0}; }\nS op(S l, S r) { return {l.su + r.su, l.nb + r.nb}; }\nvector<S> seginit(100000,\
-    \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/\n#line 5 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\
-    \n\n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
+    \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/\n#line 4 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\
+    \n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\n\
+    \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
     const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) {\n\treturn\
@@ -90,9 +90,9 @@ data:
     l--;\n    \t\tcout<<seg.prod(l, r)<<en;\n    \t} else if(typ == 3) {\n    \t\t\
     int p;\n    \t\tcin>>p>>target;\n    \t\tp--;\n    \t\tcout<<seg.max_right(p,\
     \ f)+1<<en;\n    \t}\n    }\n    return 0;\n}\n"
-  code: "#include <bits/stdc++.h>\nusing namespace std;\n\n#include \"../acl_segtree.hpp\"\
-    \n\n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
+  code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
+    \n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\n\
+    \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
     const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) {\n\treturn\
@@ -111,7 +111,7 @@ data:
   isVerificationFile: true
   path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 19:11:48+06:00'
+  timestamp: '2022-12-29 19:24:57+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp
