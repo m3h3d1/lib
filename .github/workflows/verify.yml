@@ -10,10 +10,10 @@ jobs:
 #     - name: update
 #       run: sudo apt-get update
     
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v1 # use checkout@v1 for oj-verify's timestamp
 
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
 
     - name: Install boost
       run: sudo apt install -y libboost-dev
@@ -21,10 +21,18 @@ jobs:
     - name: Install dependencies
       run: pip3 install -U online-judge-verify-helper
 
+    - name: Cache test cases
+      uses: actions/cache@v2
+      with:
+        path: ./.verify-helper/cache
+        key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/*.test.cpp') }}
+        restore-keys: |
+          ${{ runner.os }}-verify-helper-
+    
     - name: Run tests
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
         DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
-      run: oj-verify all -j 2
+      run: oj-verify all --jobs 2
