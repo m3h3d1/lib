@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #include "../acl_segtree.hpp"
-
 #define PROBLEM "https://atcoder.jp/contests/practice2/tasks/practice2_j"
 
 #define ff first
