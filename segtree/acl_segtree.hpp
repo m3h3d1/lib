@@ -38,9 +38,9 @@ int bsf(unsigned int n) {
 #ifndef ATCODER_SEGTREE_HPP
 #define ATCODER_SEGTREE_HPP 1
 
-#include <algorithm>
-#include <cassert>
-#include <vector>
+// #include <algorithm>
+// #include <cassert>
+// #include <vector>
 
 // #include "atcoder/internal_bit"
 
