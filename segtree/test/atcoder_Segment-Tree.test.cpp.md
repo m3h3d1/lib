@@ -11,22 +11,19 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    IGNORE: ''
-    IGNORE_IF_CLANG: ''
-    IGNORE_IF_GCC: ''
+    PROBLEM: https://atcoder.jp/contests/practice2/tasks/practice2_j
     links:
     - https://atcoder.jp/contests/practice2/tasks/practice2_j
-  bundledCode: "#line 1 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\n#define IGNORE\
-    \ \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"segtree/acl_segtree.hpp\"\
-    \n\n#ifndef ATCODER_INTERNAL_BITOP_HPP\n#define ATCODER_INTERNAL_BITOP_HPP 1\n\
-    \n#ifdef _MSC_VER\n#include <intrin.h>\n#endif\n\nnamespace atcoder {\n\nnamespace\
-    \ internal {\n\n// @param n `0 <= n`\n// @return minimum non-negative `x` s.t.\
-    \ `n <= 2**x`\nint ceil_pow2(int n) {\n    int x = 0;\n    while ((1U << x) <\
-    \ (unsigned int)(n)) x++;\n    return x;\n}\n\n// @param n `1 <= n`\n// @return\
-    \ minimum non-negative `x` s.t. `(n & (1 << x)) != 0`\nint bsf(unsigned int n)\
-    \ {\n#ifdef _MSC_VER\n    unsigned long index;\n    _BitScanForward(&index, n);\n\
-    \    return index;\n#else\n    return __builtin_ctz(n);\n#endif\n}\n\n} // namespace\
-    \ internal\n\n} // namespace atcoder\n\n#endif // ATCODER_INTERNAL_BITOP_HPP\n\
+  bundledCode: "#line 1 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\n#include <bits/stdc++.h>\n\
+    using namespace std;\n#line 2 \"segtree/acl_segtree.hpp\"\n\n#ifndef ATCODER_INTERNAL_BITOP_HPP\n\
+    #define ATCODER_INTERNAL_BITOP_HPP 1\n\n#ifdef _MSC_VER\n#include <intrin.h>\n\
+    #endif\n\nnamespace atcoder {\n\nnamespace internal {\n\n// @param n `0 <= n`\n\
+    // @return minimum non-negative `x` s.t. `n <= 2**x`\nint ceil_pow2(int n) {\n\
+    \    int x = 0;\n    while ((1U << x) < (unsigned int)(n)) x++;\n    return x;\n\
+    }\n\n// @param n `1 <= n`\n// @return minimum non-negative `x` s.t. `(n & (1 <<\
+    \ x)) != 0`\nint bsf(unsigned int n) {\n#ifdef _MSC_VER\n    unsigned long index;\n\
+    \    _BitScanForward(&index, n);\n    return index;\n#else\n    return __builtin_ctz(n);\n\
+    #endif\n}\n\n} // namespace internal\n\n} // namespace atcoder\n\n#endif // ATCODER_INTERNAL_BITOP_HPP\n\
     \n#ifndef ATCODER_SEGTREE_HPP\n#define ATCODER_SEGTREE_HPP 1\n\n#include <algorithm>\n\
     #include <cassert>\n#include <vector>\n\n// #include \"atcoder/internal_bit\"\n\
     \nnamespace atcoder {\n\n// The following should be defined:\n// The type S (monoid)\n\
@@ -77,7 +74,7 @@ data:
     // Reference: https://atcoder.github.io/ac-library/document_ja/segtree.html\n\
     /* usage:\nstruct S {\n    long long su;\n    int nb;\n};\nS e() { return {0,\
     \ 0}; }\nS op(S l, S r) { return {l.su + r.su, l.nb + r.nb}; }\nvector<S> seginit(100000,\
-    \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/\n#line 5 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\
+    \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/\n#line 4 \"segtree/test/atcoder_Segment-Tree.test.cpp\"\
     \n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\n\
     \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
@@ -93,9 +90,9 @@ data:
     l--;\n    \t\tcout<<seg.prod(l, r)<<en;\n    \t} else if(typ == 3) {\n    \t\t\
     int p;\n    \t\tcin>>p>>target;\n    \t\tp--;\n    \t\tcout<<seg.max_right(p,\
     \ f)+1<<en;\n    \t}\n    }\n    return 0;\n}\n"
-  code: "#define IGNORE \n#include <bits/stdc++.h>\nusing namespace std;\n#include\
-    \ \"../acl_segtree.hpp\"\n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
+  code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../acl_segtree.hpp\"\
+    \n#define PROBLEM \"https://atcoder.jp/contests/practice2/tasks/practice2_j\"\n\
+    \n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
     const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) {\n\treturn\
@@ -114,7 +111,7 @@ data:
   isVerificationFile: true
   path: segtree/test/atcoder_Segment-Tree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-29 19:58:47+06:00'
+  timestamp: '2022-12-29 20:23:21+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: segtree/test/atcoder_Segment-Tree.test.cpp
