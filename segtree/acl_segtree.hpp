@@ -164,7 +164,7 @@ private:
 
 #endif // ATCODER_SEGTREE_HPP
 
-// Reference: https://atcoder.github.io/ac-library/document_ja/segtree.html
+// Reference: https://atcoder.github.io/ac-library/document_en/segtree.html
 /* usage:
 struct S {
     long long su;
