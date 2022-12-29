@@ -10,7 +10,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    _deprecated_at_docs: docs/ds/union-find.md
+    _deprecated_at_docs: ds/union-find.md
     document_title: Union Find
     links: []
   bundledCode: "#line 1 \"ds/union-find.hpp\"\nstruct DSU {\n\tvector<int> e;\n\t\
@@ -20,20 +20,20 @@ data:
     \ x) { return -e[get(x)]; }\n\n\tbool unite(int x, int y) {  // union by size\n\
     \t\tx = get(x), y = get(y);\n\t\tif (x == y) return false;\n\t\tif (e[x] > e[y])\
     \ swap(x, y);\n\t\te[x] += e[y]; e[y] = x; return true;\n\t}\n};\n\n/**\n * @brief\
-    \ Union Find\n * @docs docs/ds/union-find.md\n */\n"
+    \ Union Find\n * @docs ds/union-find.md\n */\n"
   code: "struct DSU {\n\tvector<int> e;\n\tDSU(int n) { e = vector<int>(n, -1); }\n\
     \n\t// get representive component (uses path compression)\n\tint get(int x) {\
     \ return e[x] < 0 ? x : e[x] = get(e[x]); }\n\n\tbool same_set(int a, int b) {\
     \ return get(a) == get(b); }\n\n\tint size(int x) { return -e[get(x)]; }\n\n\t\
     bool unite(int x, int y) {  // union by size\n\t\tx = get(x), y = get(y);\n\t\t\
     if (x == y) return false;\n\t\tif (e[x] > e[y]) swap(x, y);\n\t\te[x] += e[y];\
-    \ e[y] = x; return true;\n\t}\n};\n\n/**\n * @brief Union Find\n * @docs docs/ds/union-find.md\n\
+    \ e[y] = x; return true;\n\t}\n};\n\n/**\n * @brief Union Find\n * @docs ds/union-find.md\n\
     \ */"
   dependsOn: []
   isVerificationFile: false
   path: ds/union-find.hpp
   requiredBy: []
-  timestamp: '2022-12-29 04:24:58+06:00'
+  timestamp: '2022-12-29 23:09:41+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - ds/test/yosupo_unionfind.test.cpp

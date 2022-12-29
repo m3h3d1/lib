@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links:
-    - https://atcoder.github.io/ac-library/document_ja/segtree.html
+    - https://atcoder.github.io/ac-library/document_en/segtree.html
   bundledCode: "#line 2 \"segtree/acl_segtree.hpp\"\n\n#ifndef ATCODER_INTERNAL_BITOP_HPP\n\
     #define ATCODER_INTERNAL_BITOP_HPP 1\n\n#ifdef _MSC_VER\n#include <intrin.h>\n\
     #endif\n\nnamespace atcoder {\n\nnamespace internal {\n\n// @param n `0 <= n`\n\
@@ -65,7 +65,7 @@ data:
     \ & -r) != r);\n        return 0;\n    }\n\nprivate:\n    int _n, size, log;\n\
     \    std::vector<S> d;\n\n    void update(int k) { d[k] = op(d[2 * k], d[2 * k\
     \ + 1]); }\n};\n\n} // namespace atcoder\n\n#endif // ATCODER_SEGTREE_HPP\n\n\
-    // Reference: https://atcoder.github.io/ac-library/document_ja/segtree.html\n\
+    // Reference: https://atcoder.github.io/ac-library/document_en/segtree.html\n\
     /* usage:\nstruct S {\n    long long su;\n    int nb;\n};\nS e() { return {0,\
     \ 0}; }\nS op(S l, S r) { return {l.su + r.su, l.nb + r.nb}; }\nvector<S> seginit(100000,\
     \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/\n"
@@ -125,7 +125,7 @@ data:
     \ & -r) != r);\n        return 0;\n    }\n\nprivate:\n    int _n, size, log;\n\
     \    std::vector<S> d;\n\n    void update(int k) { d[k] = op(d[2 * k], d[2 * k\
     \ + 1]); }\n};\n\n} // namespace atcoder\n\n#endif // ATCODER_SEGTREE_HPP\n\n\
-    // Reference: https://atcoder.github.io/ac-library/document_ja/segtree.html\n\
+    // Reference: https://atcoder.github.io/ac-library/document_en/segtree.html\n\
     /* usage:\nstruct S {\n    long long su;\n    int nb;\n};\nS e() { return {0,\
     \ 0}; }\nS op(S l, S r) { return {l.su + r.su, l.nb + r.nb}; }\nvector<S> seginit(100000,\
     \ e());\natcoder::segtree<S, op, e> segtree(seginit);\n*/"
@@ -133,7 +133,7 @@ data:
   isVerificationFile: false
   path: segtree/acl_segtree.hpp
   requiredBy: []
-  timestamp: '2022-12-29 19:11:48+06:00'
+  timestamp: '2022-12-29 21:38:53+06:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: segtree/acl_segtree.hpp
