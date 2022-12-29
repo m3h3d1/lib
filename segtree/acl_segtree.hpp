@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef ATCODER_INTERNAL_BITOP_HPP
 #define ATCODER_INTERNAL_BITOP_HPP 1
 
