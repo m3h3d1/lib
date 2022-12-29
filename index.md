@@ -28,8 +28,11 @@ data:
   - name: test/aoj
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj/DSL_2_A-RMQ.test.cpp
-      title: test/aoj/DSL_2_A-RMQ.test.cpp
+      path: test/aoj/DSL_2_A-RMQ(segtree).test.cpp
+      title: test/aoj/DSL_2_A-RMQ(segtree).test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+      title: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
