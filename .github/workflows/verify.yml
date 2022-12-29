@@ -22,7 +22,7 @@ jobs:
       run: pip3 install -U online-judge-verify-helper
 
     - name: Cache test cases
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ./.verify-helper/cache
         key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/*.test.cpp') }}
