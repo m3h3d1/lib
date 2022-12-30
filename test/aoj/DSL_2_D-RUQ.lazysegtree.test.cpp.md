@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: segtree/lazysegtree.hpp
     title: segtree/lazysegtree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D
   bundledCode: "#line 1 \"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\n#include\
+    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#line 2 \"segtree/lazysegtree.hpp\"\n\
     \ntemplate <class S,\n          S (*op)(S, S),\n          S (*e)(),\n        \
     \  class F,\n          S (*mapping)(F, S),\n          F (*composition)(F, F),\n\
@@ -94,7 +94,7 @@ data:
     \       seg.apply(a, b+1, x);\n        } else {\n        \tint p;\n        \t\
     cin>>p;\n            cout<<seg.get(p)<<en;\n        }\n    }\n    return 0;\n\
     }\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/lazysegtree.hpp\"\
     \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
@@ -113,8 +113,8 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 05:06:05+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-12-31 05:10:12+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
 layout: document
