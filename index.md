@@ -11,6 +11,9 @@ data:
     - icon: ':warning:'
       path: segtree/acl_segtree.hpp
       title: segtree/acl_segtree.hpp
+    - icon: ':x:'
+      path: segtree/lazysegtree.hpp
+      title: segtree/lazysegtree.hpp
     - icon: ':heavy_check_mark:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
@@ -33,6 +36,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
       title: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+    - icon: ':x:'
+      path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+      title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+  - name: test/yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/predecessor_problem.segtree.test.cpp
+      title: test/yosupo/predecessor_problem.segtree.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'

@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
     title: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/predecessor_problem.segtree.test.cpp
+    title: test/yosupo/predecessor_problem.segtree.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -107,6 +110,7 @@ data:
   verifiedWith:
   - test/aoj/DSL_2_A-RMQ(segtree).test.cpp
   - test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+  - test/yosupo/predecessor_problem.segtree.test.cpp
 documentation_of: segtree/segtree.hpp
 layout: document
 redirect_from:
