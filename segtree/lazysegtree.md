@@ -3,8 +3,9 @@ https://atcoder.github.io/ac-library/production/document_en/lazysegtree.html
 https://atcoder.jp/contests/practice2/editorial/100
 
 ## Constructor
-- (1) lazy_segtree<S, op, e, F, mapping, composition, id> seg(int n);
-- (2) lazy_segtree<S, op, e, F, mapping, composition, id> seg(vector<T> v);
+(1) lazy_segtree<S, op, e, F, mapping, composition, id> seg(int n);
+(2) lazy_segtree<S, op, e, F, mapping, composition, id> seg(vector<T> v);
+
 The following should be defined.
 
 - The type S of the monoid

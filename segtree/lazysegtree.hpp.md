@@ -10,7 +10,7 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    _deprecated_at_docs: segtree/lazysegtree.md
+    _deprecated_at_docs: ./lazysegtree.md
     links: []
   bundledCode: "#line 2 \"segtree/lazysegtree.hpp\"\n\ntemplate <class S,\n      \
     \    S (*op)(S, S),\n          S (*e)(),\n          class F,\n          S (*mapping)(F,\
@@ -75,7 +75,7 @@ data:
     \                      sm = op(dat[r], sm);\n                        r--;\n  \
     \                  }\n                }\n                return r + 1 - size;\n\
     \            }\n            sm = op(dat[r], sm);\n        } while ((r & -r) !=\
-    \ r);\n        return 0;\n    }\n};\n// @docs segtree/lazysegtree.md\n"
+    \ r);\n        return 0;\n    }\n};\n// @docs ./lazysegtree.md\n"
   code: "#pragma once\n\ntemplate <class S,\n          S (*op)(S, S),\n          S\
     \ (*e)(),\n          class F,\n          S (*mapping)(F, S),\n          F (*composition)(F,\
     \ F),\n          F (*id)()>\nstruct LazySegmentTree {\n  private:\n    int _n,\
@@ -139,12 +139,12 @@ data:
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n// @docs\
-    \ segtree/lazysegtree.md"
+    \ ./lazysegtree.md"
   dependsOn: []
   isVerificationFile: false
   path: segtree/lazysegtree.hpp
   requiredBy: []
-  timestamp: '2022-12-31 05:06:05+06:00'
+  timestamp: '2022-12-31 05:21:03+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
@@ -155,19 +155,3 @@ redirect_from:
 - /library/segtree/lazysegtree.hpp.html
 title: segtree/lazysegtree.hpp
 ---
-https://atcoder.github.io/ac-library/production/document_en/lazysegtree.html
-
-https://atcoder.jp/contests/practice2/editorial/100
-
-## Constructor
-- (1) lazy_segtree<S, op, e, F, mapping, composition, id> seg(int n);
-- (2) lazy_segtree<S, op, e, F, mapping, composition, id> seg(vector<T> v);
-The following should be defined.
-
-- The type S of the monoid
-- The binary operation S op(S a, S b)
-- The function S e() that returns ee
-- The type F of the map
-- The function S mapping(F f, S x) that returns f(x)f(x)
-- The function F composition(F f, F g) that returns f \circ gf∘g
-- The function F id() that returns \mathrm{id}id
