@@ -1,7 +1,6 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
-
 #include "../../template/template.hpp"
-#include "../union-find.hpp"
+#include "../union_find.hpp"
+#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
 int main() {
     ios_base::sync_with_stdio(0);
