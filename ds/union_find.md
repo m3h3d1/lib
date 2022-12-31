@@ -1,5 +1,10 @@
 ## Union-Find Tree(Disjoint Set Union)
 
+---
+title: Union Find
+documentation_of: ./union_find.hpp
+---
+
 #### overview
 
 - Joins two subsets into a single subset.
@@ -10,6 +15,6 @@ Description: Disjoint Set Union with path compression
 	Use for Kruskal's or Boruvka's minimum spanning tree.
 Time: $\mathrm{O}(\alpha(N))$
 
-https://usaco.guide/gold/dsu
+## Link
 
-#### Usage
+- https://usaco.guide/gold/dsu

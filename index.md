@@ -3,9 +3,9 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':heavy_check_mark:'
-      path: ds/union-find.hpp
-      title: Union Find
+    - icon: ':warning:'
+      path: ds/union_find.hpp
+      title: ds/union_find.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
@@ -30,13 +30,13 @@ data:
       title: segtree/segtree.hpp
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
   - name: ds/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: ds/test/yosupo_unionfind.test.cpp
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj

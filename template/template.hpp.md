@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: ds/test/yosupo_unionfind.test.cpp
-    title: ds/test/yosupo_unionfind.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: '#line 1 "template/template.hpp"
@@ -68,9 +65,8 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2022-12-29 04:14:56+06:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - ds/test/yosupo_unionfind.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: template/template.hpp
 layout: document
 redirect_from:
