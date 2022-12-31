@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
-  bundledCode: "#line 1 \"test/aoj/DSL_2_B-RSQ(segtree).test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\n#include\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
+  bundledCode: "#line 1 \"test/aoj/DSL_2_A-RMQ.segtree.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#line 2 \"segtree/segtree.hpp\"\n\n//\
     \ The following should be defined:\n// The type S (monoid)\n// The binary operation\
     \ S op(S a, S b)\n// The identity element S e()\ntemplate <class S, S (*op)(S,\
@@ -58,39 +58,39 @@ data:
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
-    \ 5 \"test/aoj/DSL_2_B-RSQ(segtree).test.cpp\"\n\n#define ff first\n#define ss\
+    \ 5 \"test/aoj/DSL_2_A-RMQ.segtree.test.cpp\"\n\n#define ff first\n#define ss\
     \ second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int> pii;\n\
     #define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\": \"<<#x<<\"\
-    \ = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = 1e9+7;\nconst int\
-    \ N = 1e6+9;\n\nint op(int a, int b) { return a + b; }\nint e() { return 0; }\n\
-    \nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n\
-    \    SegmentTree<int, op, e> seg(n);\n    while(q--) {\n        int typ, x, y;\n\
-    \        cin>>typ>>x>>y;\n        if(typ==0) {\n            seg.set(x, seg.get(x)\
-    \ + y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n        }\n\
-    \    }\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
+    \ = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = INT32_MAX;\nconst\
+    \ int N = 1e6+9;\n\nint op(int a, int b) { return min(a, b); }\nint e() { return\
+    \ inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q;\n \
+    \   cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--) {\n      \
+    \  int typ, x, y;\n        cin>>typ>>x>>y;\n        if(typ==0) {\n           \
+    \ seg.set(x, y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n\
+    \        }\n    }\n    return 0;\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/segtree.hpp\"\
     \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
-    const int inf = 1e9+7;\nconst int N = 1e6+9;\n\nint op(int a, int b) { return\
-    \ a + b; }\nint e() { return 0; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    const int inf = INT32_MAX;\nconst int N = 1e6+9;\n\nint op(int a, int b) { return\
+    \ min(a, b); }\nint e() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
     \    int n, q;\n    cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--)\
     \ {\n        int typ, x, y;\n        cin>>typ>>x>>y;\n        if(typ==0) {\n \
-    \           seg.set(x, seg.get(x) + y);\n        } else {\n            cout<<seg.prod(x,\
-    \ y+1)<<en;\n        }\n    }\n    return 0;\n}"
+    \           seg.set(x, y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n\
+    \        }\n    }\n    return 0;\n}"
   dependsOn:
   - segtree/segtree.hpp
   isVerificationFile: true
-  path: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+  path: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-30 00:09:11+06:00'
+  timestamp: '2022-12-31 06:17:39+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+documentation_of: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/DSL_2_B-RSQ(segtree).test.cpp
-- /verify/test/aoj/DSL_2_B-RSQ(segtree).test.cpp.html
-title: test/aoj/DSL_2_B-RSQ(segtree).test.cpp
+- /verify/test/aoj/DSL_2_A-RMQ.segtree.test.cpp
+- /verify/test/aoj/DSL_2_A-RMQ.segtree.test.cpp.html
+title: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
 ---
