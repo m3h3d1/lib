@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: ds/test/yosupo_unionfind.test.cpp
+    title: ds/test/yosupo_unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"ds/union_find.hpp\"\nstruct DSU {\n\tvector<int> e;\n\t\
@@ -27,8 +30,9 @@ data:
   path: ds/union_find.hpp
   requiredBy: []
   timestamp: '2022-12-31 10:34:10+06:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - ds/test/yosupo_unionfind.test.cpp
 documentation_of: ds/union_find.hpp
 layout: document
 redirect_from:
