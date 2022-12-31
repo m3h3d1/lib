@@ -3,23 +3,15 @@
 using namespace std;
 #include "../../segtree/lazysegtree.hpp"
 
-#define ff first
-#define ss second
-#define pb push_back
-typedef long long ll;
-typedef pair<int,int> pii;
-#define all(v) (v).begin(),(v).end()
-#define db(x) cerr<<__LINE__<<": "<<#x<<" = "<<(x)<<'\n'
 const char en = '\n';
 const int inf = INT32_MAX;
-const int N = 1e6+9;
 
 using S = int;
 using F = int;
 S op(S a,S b) { return a < b; }
 S e() { return inf; }
-S mapping(F f,S x) {return (f == inf ? x : f); }
-F composition(F f,F g) {return (f == inf ? g : f); }
+S mapping(F f,S x) { return (f == inf ? x : f); }
+F composition(F f,F g) { return (f == inf ? g : f); }
 F id() { return inf; }
 
 int main() {
