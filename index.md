@@ -6,12 +6,23 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/union-find.hpp
       title: Union Find
+  - name: .
+    pages:
+    - icon: ':x:'
+      path: mint.hpp
+      title: mint.hpp
+    - icon: ':warning:'
+      path: modint.hpp
+      title: modint.hpp
   - name: segtree
     pages:
     - icon: ':warning:'
+      path: segtree/acl_lazysegtree.hpp
+      title: segtree/acl_lazysegtree.hpp
+    - icon: ':warning:'
       path: segtree/acl_segtree.hpp
       title: segtree/acl_segtree.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: segtree/lazysegtree.hpp
       title: segtree/lazysegtree.hpp
     - icon: ':heavy_check_mark:'
@@ -44,6 +55,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/predecessor_problem.segtree.test.cpp
       title: test/yosupo/predecessor_problem.segtree.test.cpp
+    - icon: ':x:'
+      path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
+      title: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'

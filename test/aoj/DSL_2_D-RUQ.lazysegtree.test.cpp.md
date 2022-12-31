@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: segtree/lazysegtree.hpp
     title: segtree/lazysegtree.hpp
   _extendedRequiredBy: []
@@ -81,13 +81,10 @@ data:
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n// @docs\
     \ segtree/lazysegtree.md\n#line 5 \"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
-    \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
-    \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
-    const int inf = INT32_MAX;\nconst int N = 1e6+9;\n\nusing S = int;\nusing F =\
-    \ int;\nS op(S a,S b) { return a < b; }\nS e() { return inf; }\nS mapping(F f,S\
-    \ x) {return (f == inf ? x : f); }\nF composition(F f,F g) {return (f == inf ?\
-    \ g : f); }\nF id() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \n\nconst char en = '\\n';\nconst int inf = INT32_MAX;\n\nusing S = int;\nusing\
+    \ F = int;\nS op(S a,S b) { return a < b; }\nS e() { return inf; }\nS mapping(F\
+    \ f,S x) { return (f == inf ? x : f); }\nF composition(F f,F g) { return (f ==\
+    \ inf ? g : f); }\nF id() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
     \    int n, q;\n    cin>>n>>q;\n    LazySegmentTree<S, op, e, F, mapping, composition,\
     \ id> seg(n);\n    while(q--) {\n        int typ;\n        cin>>typ;\n       \
     \ if(typ==0) {\n        \tint a, b, x;\n        \tcin>>a>>b>>x;\n            seg.apply(a,\
@@ -95,13 +92,10 @@ data:
     \  cout<<seg.get(p)<<en;\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/lazysegtree.hpp\"\
-    \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
-    \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
-    \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
-    const int inf = INT32_MAX;\nconst int N = 1e6+9;\n\nusing S = int;\nusing F =\
-    \ int;\nS op(S a,S b) { return a < b; }\nS e() { return inf; }\nS mapping(F f,S\
-    \ x) {return (f == inf ? x : f); }\nF composition(F f,F g) {return (f == inf ?\
-    \ g : f); }\nF id() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \n\nconst char en = '\\n';\nconst int inf = INT32_MAX;\n\nusing S = int;\nusing\
+    \ F = int;\nS op(S a,S b) { return a < b; }\nS e() { return inf; }\nS mapping(F\
+    \ f,S x) { return (f == inf ? x : f); }\nF composition(F f,F g) { return (f ==\
+    \ inf ? g : f); }\nF id() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
     \    int n, q;\n    cin>>n>>q;\n    LazySegmentTree<S, op, e, F, mapping, composition,\
     \ id> seg(n);\n    while(q--) {\n        int typ;\n        cin>>typ;\n       \
     \ if(typ==0) {\n        \tint a, b, x;\n        \tcin>>a>>b>>x;\n            seg.apply(a,\
@@ -112,7 +106,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 06:17:39+06:00'
+  timestamp: '2022-12-31 09:46:33+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
