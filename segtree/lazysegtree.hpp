@@ -161,4 +161,4 @@ struct LazySegmentTree {
         return 0;
     }
 };
-// @docs ./lazysegtree.md
+// @docs segtree/lazysegtree.md

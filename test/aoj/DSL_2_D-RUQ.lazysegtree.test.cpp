@@ -14,17 +14,19 @@ const char en = '\n';
 const int inf = INT32_MAX;
 const int N = 1e6+9;
 
-int op(int a, int b) { return a < b; }
-int e() { return inf; }
-int mapping(int f, int x) { return (f == inf ? x : f); }
-int composition(int f, int g) { return (f == inf ? g : f); }
-int id() { return inf; }
+using S = int;
+using F = int;
+S op(S a,S b) { return a < b; }
+S e() { return inf; }
+S mapping(F f,S x) {return (f == inf ? x : f); }
+F composition(F f,F g) {return (f == inf ? g : f); }
+F id() { return inf; }
 
 int main() {
     ios_base::sync_with_stdio(0);
     int n, q;
     cin>>n>>q;
-    LazySegmentTree<int, op, e, int, mapping, composition, id> seg(n);
+    LazySegmentTree<S, op, e, F, mapping, composition, id> seg(n);
     while(q--) {
         int typ;
         cin>>typ;
