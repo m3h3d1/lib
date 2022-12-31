@@ -1,4 +1,4 @@
-pragma once
+#pragma once
 
 template <class T, class Op = multiplies<T>>
 T power(T a, long long n, Op op = Op(), T e = {1}) { // argument a in mint
