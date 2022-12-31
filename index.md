@@ -25,7 +25,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: segtree/lazysegtree.hpp
       title: Lazy Segtree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
   - name: template
@@ -51,6 +51,9 @@ data:
       path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+      title: test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
     - icon: ':heavy_check_mark:'
@@ -62,6 +65,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
+  - name: test/atcoder
+    pages:
+    - icon: ':x:'
+      path: test/atcoder/abc185_f-range_xor_query.segtree.test.cpp
+      title: test/atcoder/abc185_f-range_xor_query.segtree.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'

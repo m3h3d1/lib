@@ -7,6 +7,9 @@ data:
     path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
     title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+    title: test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
     title: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
   - icon: ':heavy_check_mark:'
@@ -164,6 +167,7 @@ data:
   - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   - test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
   - test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
+  - test/aoj/DSL_2_E-RAQ.segtree.test.cpp
   - test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
   - test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
 documentation_of: segtree/lazysegtree.hpp
