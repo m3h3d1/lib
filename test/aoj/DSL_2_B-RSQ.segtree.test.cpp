@@ -1,18 +1,7 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../segtree/segtree.hpp"
-
-#define ff first
-#define ss second
-#define pb push_back
-typedef long long ll;
-typedef pair<int,int> pii;
-#define all(v) (v).begin(),(v).end()
-#define db(x) cerr<<__LINE__<<": "<<#x<<" = "<<(x)<<'\n'
-const char en = '\n';
-const int inf = 1e9+7;
-const int N = 1e6+9;
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_B"
 
 int op(int a, int b) { return a + b; }
 int e() { return 0; }
@@ -28,7 +17,7 @@ int main() {
         if(typ==0) {
             seg.set(x, seg.get(x) + y);
         } else {
-            cout<<seg.prod(x, y+1)<<en;
+            cout<<seg.prod(x, y+1)<<'\n';
         }
     }
     return 0;

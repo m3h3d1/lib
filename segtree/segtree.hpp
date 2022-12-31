@@ -1,9 +1,5 @@
 #pragma once
 
-// The following should be defined:
-// The type S (monoid)
-// The binary operation S op(S a, S b)
-// The identity element S e()
 template <class S, S (*op)(S, S), S (*e)()>
 struct SegmentTree {
   private:
