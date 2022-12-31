@@ -35,8 +35,21 @@ data:
   - ds/test/yosupo_unionfind.test.cpp
 documentation_of: ds/union_find.hpp
 layout: document
-redirect_from:
-- /library/ds/union_find.hpp
-- /library/ds/union_find.hpp.html
-title: ds/union_find.hpp
+title: Union Find
 ---
+
+## Union-Find Tree(Disjoint Set Union)
+
+#### overview
+
+- Joins two subsets into a single subset.
+- Check if vertices $x, y$ belongs to the same set.
+
+Description: Disjoint Set Union with path compression
+	and union by size. Add edges and test connectivity. 
+	Use for Kruskal's or Boruvka's minimum spanning tree.
+Time: $\mathrm{O}(\alpha(N))$
+
+## Link
+
+- https://usaco.guide/gold/dsu

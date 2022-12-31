@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: ds/union_find.hpp
-    title: ds/union_find.hpp
+    title: Union Find
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
