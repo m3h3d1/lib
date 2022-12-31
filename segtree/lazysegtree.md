@@ -39,4 +39,4 @@ LazySegmentTree<S, op, e, F, mp, composition, id> seg(v);
 ## Link
 
 - [ACL reference](https://atcoder.github.io/ac-library/production/document_en/lazysegtree.html)
-- [](https://atcoder.jp/contests/practice2/editorial/100)
+- (https://atcoder.jp/contests/practice2/editorial/100)

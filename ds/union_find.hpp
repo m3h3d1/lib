@@ -16,8 +16,3 @@ struct DSU {
 		e[x] += e[y]; e[y] = x; return true;
 	}
 };
-
-/**
- * @brief Union Find
- * @docs ds/union-find.md
- */
