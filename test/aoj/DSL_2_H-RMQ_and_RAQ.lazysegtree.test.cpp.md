@@ -78,10 +78,10 @@ data:
     \           if (g(op(dat[r], sm))) {\n                        sm = op(dat[r],\
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
-    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
-    \ 4 \"test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp\"\n#define PROBLEM \"\
-    https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_H\"\nconst int INF = 1e9+7;\n\n\
-    using S = int;\nusing F = int;\n\nS op(S a, S b) { return min(a, b); }\nS e()\
+    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n}; // LazySegmentTree\n\
+    #line 4 \"test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_H\"\nconst int INF = 1e9+7;\n\
+    \nusing S = int;\nusing F = int;\n\nS op(S a, S b) { return min(a, b); }\nS e()\
     \ { return INF; }\nS mapping(F f, S x) { return f + x; }\nF composition(F fnew,\
     \ F gold) { return gold + fnew; }\nF id() { return 0; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
     \    int n, q;\n    cin>>n>>q;\n    vector<S> v(n);\n    LazySegmentTree<S, op,\
@@ -105,7 +105,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 21:40:17+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp

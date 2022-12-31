@@ -102,7 +102,7 @@ data:
     \                      sm = op(dat[r], sm);\n                        r--;\n  \
     \                  }\n                }\n                return r + 1 - size;\n\
     \            }\n            sm = op(dat[r], sm);\n        } while ((r & -r) !=\
-    \ r);\n        return 0;\n    }\n};\n#line 5 \"test/yosupo/range_affine_range_sum.lazysegtree.test.cpp\"\
+    \ r);\n        return 0;\n    }\n}; // LazySegmentTree\n#line 5 \"test/yosupo/range_affine_range_sum.lazysegtree.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\n\
     \nusing T = modular<998244353>;\nusing S = pair<T, int>;\nusing F = pair<T, T>;\n\
     S op(S a,S b) { return make_pair(a.first + b.first, a.second + b.second); }\n\
@@ -138,7 +138,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 21:40:17+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp

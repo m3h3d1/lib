@@ -58,7 +58,7 @@ data:
     \  sm = op(dat[r], sm);\n                        r--;\n                    }\n\
     \                }\n                return r + 1 - size;\n            }\n    \
     \        sm = op(dat[r], sm);\n        } while ((r & -r) != r);\n        return\
-    \ 0;\n    }\n};\n"
+    \ 0;\n    }\n}; // SegmentTree\n"
   code: "#pragma once\n\n// The following should be defined:\n// The type S (monoid)\n\
     // The binary operation S op(S a, S b)\n// The identity element S e()\ntemplate\
     \ <class S, S (*op)(S, S), S (*e)()>\nstruct SegmentTree {\n  private:\n    int\
@@ -100,12 +100,12 @@ data:
     \  sm = op(dat[r], sm);\n                        r--;\n                    }\n\
     \                }\n                return r + 1 - size;\n            }\n    \
     \        sm = op(dat[r], sm);\n        } while ((r & -r) != r);\n        return\
-    \ 0;\n    }\n};"
+    \ 0;\n    }\n}; // SegmentTree"
   dependsOn: []
   isVerificationFile: false
   path: segtree/segtree.hpp
   requiredBy: []
-  timestamp: '2022-12-30 00:09:11+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_A-RMQ.segtree.test.cpp

@@ -57,16 +57,16 @@ data:
     \                    if (f(op(dat[r], sm))) {\n                        sm = op(dat[r],\
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
-    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
-    \ 5 \"test/aoj/DSL_2_A-RMQ.segtree.test.cpp\"\n\n#define ff first\n#define ss\
-    \ second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int> pii;\n\
-    #define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\": \"<<#x<<\"\
-    \ = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = INT32_MAX;\nconst\
-    \ int N = 1e6+9;\n\nint op(int a, int b) { return min(a, b); }\nint e() { return\
-    \ inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q;\n \
-    \   cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--) {\n      \
-    \  int typ, x, y;\n        cin>>typ>>x>>y;\n        if(typ==0) {\n           \
-    \ seg.set(x, y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n\
+    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n}; // SegmentTree\n\
+    #line 5 \"test/aoj/DSL_2_A-RMQ.segtree.test.cpp\"\n\n#define ff first\n#define\
+    \ ss second\n#define pb push_back\ntypedef long long ll;\ntypedef pair<int,int>\
+    \ pii;\n#define all(v) (v).begin(),(v).end()\n#define db(x) cerr<<__LINE__<<\"\
+    : \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\nconst int inf = INT32_MAX;\n\
+    const int N = 1e6+9;\n\nint op(int a, int b) { return min(a, b); }\nint e() {\
+    \ return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n,\
+    \ q;\n    cin>>n>>q;\n    SegmentTree<int, op, e> seg(n);\n    while(q--) {\n\
+    \        int typ, x, y;\n        cin>>typ>>x>>y;\n        if(typ==0) {\n     \
+    \       seg.set(x, y);\n        } else {\n            cout<<seg.prod(x, y+1)<<en;\n\
     \        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/segtree.hpp\"\
@@ -84,7 +84,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 06:17:39+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_A-RMQ.segtree.test.cpp

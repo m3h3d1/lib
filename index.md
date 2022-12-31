@@ -51,11 +51,17 @@ data:
       path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
+      title: test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
+      title: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'

@@ -78,11 +78,11 @@ data:
     \           if (g(op(dat[r], sm))) {\n                        sm = op(dat[r],\
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
-    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
-    \ 4 \"test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp\"\n#define PROBLEM \"\
-    https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G\"\nconst int INF = 1e9+7;\n\n\
-    struct S {\n    long long val;\n    int size;\n};\nusing F = long long;\n\nS op(S\
-    \ a, S b) { \n    return {a.val + b.val, a.size + b.size}; \n}\nS e() { return\
+    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n}; // LazySegmentTree\n\
+    #line 4 \"test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G\"\nconst int INF = 1e9+7;\n\
+    \nstruct S {\n    long long val;\n    int size;\n};\nusing F = long long;\n\n\
+    S op(S a, S b) { \n    return {a.val + b.val, a.size + b.size}; \n}\nS e() { return\
     \ {0, 0}; }\nS mapping(F f, S x) {\n    return {x.val + f*x.size, x.size};\n}\n\
     F composition(F f, F g) { return f+g; }\nF id() { return 0; }\n\nint main() {\n\
     \    ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n    vector<S>\
@@ -108,7 +108,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 21:40:17+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp

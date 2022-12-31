@@ -57,7 +57,7 @@ data:
     \ {\n                        sm = op(dat[r], sm);\n                        r--;\n\
     \                    }\n                }\n                return r + 1 - size;\n\
     \            }\n            sm = op(dat[r], sm);\n        } while ((r & -r) !=\
-    \ r);\n        return 0;\n    }\n};\n#line 5 \"test/yosupo/predecessor_problem.segtree.test.cpp\"\
+    \ r);\n        return 0;\n    }\n}; // SegmentTree\n#line 5 \"test/yosupo/predecessor_problem.segtree.test.cpp\"\
     \n\n#define ff first\n#define ss second\n#define pb push_back\ntypedef long long\
     \ ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n#define\
     \ db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en = '\\n';\n\
@@ -97,7 +97,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/predecessor_problem.segtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 05:06:05+06:00'
+  timestamp: '2022-12-31 22:49:07+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/predecessor_problem.segtree.test.cpp
