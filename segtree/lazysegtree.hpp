@@ -160,4 +160,4 @@ struct LazySegmentTree {
         } while ((r & -r) != r);
         return 0;
     }
-};
+}; // LazySegmentTree

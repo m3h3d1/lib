@@ -11,24 +11,24 @@ The following should be defined.
 
 - The type S of the monoid
 - The binary operation S op(S a, S b)
-- The function S e() that returns ee
+- The function S e() that returns e
 - The type F of the map
 - The function S mapping(F f, S x) that returns $f(x)$
-- The function F composition(F f, F g) that returns f $\mathrm{\circ gf∘g}$
-- The function F id() that returns $\mathrm{id}$
+- The function F composition(F f, F g) that returns $\mathrm{\circ f∘g}$
+- The function F id() that returns $id$
 
 ### S & F
-S is data, the type of each element and interval retrieval result. <br/>
+S is data, the type of each element and range query result. <br/>
 F is lazy, the type of values that represent operations(maps).
 
 ### S op(S a, S b)
 Defines what kind of calculation is used to obtain the interval.
 
 ### S mapping(F f, S x)
-A function $\mathrm{f}$ that operates on the data value of each node $x$.
+A function $f$ that operates on the data value of each node $x$.
 
 ### F composition(F f, F g)
-It is a function that adds a new operation to lazy that has already accumulated the operations so far. g is the operation so far, f is the operation to be added after, and returns "a set of operations (composition map) that performs the two operations in order".
+It is a function that adds a new operation to lazy that has already accumulated the operations so far. $g$ is the operation so far, $f$ is the operation to be added after, and returns "a set of operations (composition map) that performs the two operations in order".
 
 ### S e(), F id()
 These are the functions that return the identity map for the interval retrieval operation and the interval manipulation operation respectively.<br/>
@@ -36,7 +36,7 @@ The identity element e of a binary operation is the one that satisfies all op. <
 
 As a frequently used unit element or identity map, if minimum: +∞, if maximum: −∞, if sum or addition: 0, if it is a product or multiplication: 1 should be used. <br/>
 
-$\mathrm{mapping}$ The identity map in an operating function is id. In the case of an interval addition operation, "a value that never changes the target value even if added". <br/>
+$mapping$ The identity map in an operating function is $id$. In the case of an interval addition operation, "a value that never changes the target value even if added". <br/>
 
 ## Example
 ### Sample
@@ -99,18 +99,22 @@ int main(){
 ```
 
 ### Range Addition/ Range Sum query
-Since the interval width is required, it has a value in a structure. Get the value with $\mathrm{seg.prod(l, r).value}$
+Since the interval width is required, it has a value in a structure. Get the value with $seg.prod(l, r).val$
 [RSQ and RAQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G)
 ```cpp
 struct S {
-    long long value; // actual value
+    long long val; // actual value
     int size; // interval width
 };
 using F = long long;
 
-S op(S a, S b) { return {a.value+b.value, a.size+b.size}; }
+S op(S a, S b) { 
+    return {a.val + b.val, a.size + b.size}; 
+}
 S e() { return {0, 0}; }
-S mapping(F f, S x) { return (x.value + f*x.size, x.size); }
+S mapping(F f, S x) {
+    return {x.val + f*x.size, x.size};
+}
 F composition(F f, F g) { return f+g; }
 F id() { return 0; }
 
@@ -138,7 +142,7 @@ F id(){ return ID; }
 
 int main(){
     int N;
-    std::vector<S> v(N);
+    std::vector<S> v(N); // v(N, INF/ID)?
     LazySegmentTree<S, op, e, F, mapping, composition, id> seg(v);
 }
 ```

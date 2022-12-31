@@ -105,4 +105,4 @@ struct SegmentTree {
         } while ((r & -r) != r);
         return 0;
     }
-};
+}; // SegmentTree
