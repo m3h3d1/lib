@@ -2,7 +2,7 @@
 "ds/test/yosupo_unionfind.test.cpp": "2022-12-29 23:09:41 +0600",
 "test/aoj/DSL_2_A-RMQ.segtree.test.cpp": "2022-12-31 06:17:39 +0600",
 "test/aoj/DSL_2_B-RSQ.segtree.test.cpp": "2022-12-31 06:17:39 +0600",
-"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp": "2022-12-31 06:17:39 +0600",
+"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp": "2022-12-31 09:46:33 +0600",
 "test/yosupo/predecessor_problem.segtree.test.cpp": "2022-12-31 05:06:05 +0600",
 "yosupo-counting-primes.test.cpp": "2022-12-29 04:14:56 +0600"
 }
