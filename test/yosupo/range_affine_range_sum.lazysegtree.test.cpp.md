@@ -1,34 +1,34 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: mint.hpp
     title: mint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: segtree/lazysegtree.hpp
     title: segtree/lazysegtree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/range_affine_range_sum
     links:
     - https://judge.yosupo.jp/problem/range_affine_range_sum
   bundledCode: "#line 1 \"test/yosupo/range_affine_range_sum.lazysegtree.test.cpp\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 1 \"mint.hpp\"\npragma\
-    \ once\n\ntemplate <class T, class Op = multiplies<T>>\nT power(T a, long long\
-    \ n, Op op = Op(), T e = {1}) { // argument a in mint\n  assert(n >= 0);\n  while\
-    \ (n) {\n    if (n & 1) e = op(e, a);\n    if (n >>= 1) a = op(a, a);\n  }\n \
-    \ return e;\n}\ntemplate <unsigned M> struct modular {\n#pragma GCC diagnostic\
-    \ push\n#pragma GCC diagnostic ignored \"-Wconversion\"\n  static constexpr unsigned\
-    \ mod = M;\n  using m = modular;\n  unsigned v;\n  modular(long long x = 0) :\
-    \ v((x %= mod) < 0 ? x + mod : x) {}\n  m operator-() const { return m() -= *this;\
-    \ }\n  m& operator+=(m b) { if ((int)(v += b.v - mod) < 0) v += mod; return *this;\
-    \ }\n  m& operator-=(m b) { if ((int)(v -= b.v) < 0) v += mod; return *this; }\n\
-    \  m& operator*=(m b) { v = (uint64_t)v * b.v % mod; return *this; }\n  m& operator/=(m\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"mint.hpp\"\n\ntemplate\
+    \ <class T, class Op = multiplies<T>>\nT power(T a, long long n, Op op = Op(),\
+    \ T e = {1}) { // argument a in mint\n  assert(n >= 0);\n  while (n) {\n    if\
+    \ (n & 1) e = op(e, a);\n    if (n >>= 1) a = op(a, a);\n  }\n  return e;\n}\n\
+    template <unsigned M> struct modular {\n#pragma GCC diagnostic push\n#pragma GCC\
+    \ diagnostic ignored \"-Wconversion\"\n  static constexpr unsigned mod = M;\n\
+    \  using m = modular;\n  unsigned v;\n  modular(long long x = 0) : v((x %= mod)\
+    \ < 0 ? x + mod : x) {}\n  m operator-() const { return m() -= *this; }\n  m&\
+    \ operator+=(m b) { if ((int)(v += b.v - mod) < 0) v += mod; return *this; }\n\
+    \  m& operator-=(m b) { if ((int)(v -= b.v) < 0) v += mod; return *this; }\n \
+    \ m& operator*=(m b) { v = (uint64_t)v * b.v % mod; return *this; }\n  m& operator/=(m\
     \ b) { return *this *= power(b, mod - 2); }\n  friend m operator+(m a, m b) {\
     \ return a += b; }\n  friend m operator-(m a, m b) { return a -= b; }\n  friend\
     \ m operator*(m a, m b) { return a *= b; }\n  friend m operator/(m a, m b) { return\
@@ -138,8 +138,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 09:46:33+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-12-31 09:50:33+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
 layout: document

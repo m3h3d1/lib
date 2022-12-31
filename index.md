@@ -8,7 +8,7 @@ data:
       title: Union Find
   - name: .
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: mint.hpp
       title: mint.hpp
     - icon: ':warning:'
@@ -22,7 +22,7 @@ data:
     - icon: ':warning:'
       path: segtree/acl_segtree.hpp
       title: segtree/acl_segtree.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: segtree/lazysegtree.hpp
       title: segtree/lazysegtree.hpp
     - icon: ':heavy_check_mark:'
@@ -55,7 +55,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/predecessor_problem.segtree.test.cpp
       title: test/yosupo/predecessor_problem.segtree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
       title: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   - name: .

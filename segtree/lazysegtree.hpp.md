@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
     title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
     title: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: segtree/lazysegtree.md
     links: []
@@ -148,7 +148,7 @@ data:
   path: segtree/lazysegtree.hpp
   requiredBy: []
   timestamp: '2022-12-31 06:17:39+06:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   - test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
