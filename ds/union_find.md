@@ -1,9 +1,9 @@
-## Union-Find Tree(Disjoint Set Union)
-
 ---
 title: Union Find
 documentation_of: ./union_find.hpp
 ---
+
+## Union-Find Tree(Disjoint Set Union)
 
 #### overview
 
