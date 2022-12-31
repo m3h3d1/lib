@@ -7,13 +7,18 @@ data:
     path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
     title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
+    title: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
+    title: test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
     title: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    _deprecated_at_docs: segtree/lazysegtree.md
     links: []
   bundledCode: "#line 2 \"segtree/lazysegtree.hpp\"\n\ntemplate <class S,\n      \
     \    S (*op)(S, S),\n          S (*e)(),\n          class F,\n          S (*mapping)(F,\
@@ -78,7 +83,7 @@ data:
     \                      sm = op(dat[r], sm);\n                        r--;\n  \
     \                  }\n                }\n                return r + 1 - size;\n\
     \            }\n            sm = op(dat[r], sm);\n        } while ((r & -r) !=\
-    \ r);\n        return 0;\n    }\n};\n// @docs segtree/lazysegtree.md\n"
+    \ r);\n        return 0;\n    }\n};\n"
   code: "#pragma once\n\ntemplate <class S,\n          S (*op)(S, S),\n          S\
     \ (*e)(),\n          class F,\n          S (*mapping)(F, S),\n          F (*composition)(F,\
     \ F),\n          F (*id)()>\nstruct LazySegmentTree {\n  private:\n    int _n,\
@@ -141,16 +146,17 @@ data:
     \           if (g(op(dat[r], sm))) {\n                        sm = op(dat[r],\
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
-    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n// @docs\
-    \ segtree/lazysegtree.md"
+    \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: segtree/lazysegtree.hpp
   requiredBy: []
-  timestamp: '2022-12-31 06:17:39+06:00'
+  timestamp: '2022-12-31 21:40:17+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+  - test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
+  - test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
   - test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
 documentation_of: segtree/lazysegtree.hpp
 layout: document
@@ -158,8 +164,8 @@ title: Lazy Segtree
 ---
 
 ## Constructor
-	(1) lazy_segtree<S, op, e, F, mapping, composition, id> seg(int n);
-	(2) lazy_segtree<S, op, e, F, mapping, composition, id> seg(vector<T> v);
+1. lazy_segtree<S, op, e, F, mapping, composition, id> seg(int n); <br/>
+2. lazy_segtree<S, op, e, F, mapping, composition, id> seg(vector<T> v); <br/>
 
 The following should be defined.
 
@@ -172,25 +178,25 @@ The following should be defined.
 - The function F id() that returns $\mathrm{id}$
 
 ### S & F
-	S is data, the type of each element and interval retrieval result.
-	F is lazy, the type of values that represent operations(maps).
+S is data, the type of each element and interval retrieval result. <br/>
+F is lazy, the type of values that represent operations(maps).
 
 ### S op(S a, S b)
-	Defines what kind of calculation is used to obtain the interval.
+Defines what kind of calculation is used to obtain the interval.
 
 ### S mapping(F f, S x)
-	A function $\mathrm{f}$ that operates on the data value of each node $x$.
+A function $\mathrm{f}$ that operates on the data value of each node $x$.
 
 ### F composition(F f, F g)
-	It is a function that adds a new operation to lazy that has already accumulated the operations so far. g is the operation so far, f is the operation to be added after, and returns "a set of operations (composition map) that performs the two operations in order".
+It is a function that adds a new operation to lazy that has already accumulated the operations so far. g is the operation so far, f is the operation to be added after, and returns "a set of operations (composition map) that performs the two operations in order".
 
 ### S e(), F id()
-	These are the functions that return the identity map for the interval retrieval operation and the interval manipulation operation respectively.
-	The identity element e of a binary operation is the one that satisfies all op.
+These are the functions that return the identity map for the interval retrieval operation and the interval manipulation operation respectively.<br/>
+The identity element e of a binary operation is the one that satisfies all op. <br/>
 
-	As a frequently used unit element or identity map, if minimum: +∞, if maximum: −∞, if sum or addition: 0, if it is a product or multiplication: 1 should be used.
+As a frequently used unit element or identity map, if minimum: +∞, if maximum: −∞, if sum or addition: 0, if it is a product or multiplication: 1 should be used. <br/>
 
-	$\mathrm{mapping}$ The identity map in an operating function is id. In the case of an interval addition operation, "a value that never changes the target value even if added". 
+$\mathrm{mapping}$ The identity map in an operating function is id. In the case of an interval addition operation, "a value that never changes the target value even if added". <br/>
 
 ## Example
 ### Sample
@@ -211,7 +217,7 @@ vector<S> v;
 LazySegmentTree<S, op, e, F, mp, composition, id> seg(v);
 ```
 
-### Section addition/ section minimum value acquisition
+### Range addition/ Range minimum query
 [RMQ and RAQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_H)
 ```cpp
 using S = long long;
@@ -232,7 +238,7 @@ int main(){
 }
 ```
 
-### Section addition/ section maximum value acquisition
+### Range addition/ Range maximum query
 ```cpp
 using S = long long;
 using F = long long;
@@ -252,20 +258,21 @@ int main(){
 }
 ```
 
-### Interval Addition/ Interval Sum Acquisition
-[AOJ (RSQ and RAQ)](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G)
+### Range Addition/ Range Sum query
+Since the interval width is required, it has a value in a structure. Get the value with $\mathrm{seg.prod(l, r).value}$
+[RSQ and RAQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G)
 ```cpp
-struct S{
+struct S {
     long long value; // actual value
     int size; // interval width
 };
 using F = long long;
 
-S op(S a, S b){ return {a.value+b.value, a.size+b.size}; }
-S e(){ return {0, 0}; }
-S mapping(F f, S x){ return {x.value + f*x.size, x.size}; }
-F composition(F f, F g){ return f+g; }
-F id(){ return 0; }
+S op(S a, S b) { return {a.value+b.value, a.size+b.size}; }
+S e() { return {0, 0}; }
+S mapping(F f, S x) { return (x.value + f*x.size, x.size); }
+F composition(F f, F g) { return f+g; }
+F id() { return 0; }
 
 int main(){
     int N;
@@ -274,7 +281,7 @@ int main(){
 }
 ```
 
-### Section change/ section minimum value acquisition
+### Range update/ Range minimum query
 [RMQ and RUQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_F)
 ```cpp
 using S = long long;
@@ -296,7 +303,7 @@ int main(){
 }
 ```
 
-### Section change/ section maximum value acquisition
+### Range update/ Range maximum query
 [RMQ and RUQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_F)
 ```cpp
 using S = long long;
@@ -318,7 +325,7 @@ int main(){
 }
 ```
 
-### Section change/ segment sum acquisition
+### Range update/ Range sum query
 [RSQ and RUQ](https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_I)
 ```cpp
 struct S{
@@ -348,8 +355,7 @@ int main(){
 
 
 ## Link
-
 - [ACL reference](https://atcoder.github.io/ac-library/production/document_en/lazysegtree.html)
-- (https://atcoder.jp/contests/practice2/editorial/100)
+- https://atcoder.jp/contests/practice2/editorial/100
 - [Uses](https://betrue12.hateblo.jp/entry/2020/09/22/194541)
 - [Cheat Sheet](https://betrue12.hateblo.jp/entry/2020/09/23/005940)

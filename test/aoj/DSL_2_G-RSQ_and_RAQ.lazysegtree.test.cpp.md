@@ -11,11 +11,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D
-  bundledCode: "#line 1 \"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp\"\n#define PROBLEM\
-    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D\"\n#include\
+    - https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G
+  bundledCode: "#line 1 \"test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#line 2 \"segtree/lazysegtree.hpp\"\n\
     \ntemplate <class S,\n          S (*op)(S, S),\n          S (*e)(),\n        \
     \  class F,\n          S (*mapping)(F, S),\n          F (*composition)(F, F),\n\
@@ -80,39 +79,42 @@ data:
     \ sm);\n                        r--;\n                    }\n                }\n\
     \                return r + 1 - size;\n            }\n            sm = op(dat[r],\
     \ sm);\n        } while ((r & -r) != r);\n        return 0;\n    }\n};\n#line\
-    \ 5 \"test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp\"\n\nconst char en = '\\n';\n\
-    const int inf = INT32_MAX;\n\nusing S = int;\nusing F = int;\nS op(S a,S b) {\
-    \ return a < b; }\nS e() { return inf; }\nS mapping(F f,S x) { return (f == inf\
-    \ ? x : f); }\nF composition(F f,F g) { return (f == inf ? g : f); }\nF id() {\
-    \ return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n,\
-    \ q;\n    cin>>n>>q;\n    LazySegmentTree<S, op, e, F, mapping, composition, id>\
-    \ seg(n);\n    while(q--) {\n        int typ;\n        cin>>typ;\n        if(typ==0)\
-    \ {\n        \tint a, b, x;\n        \tcin>>a>>b>>x;\n            seg.apply(a,\
-    \ b+1, x);\n        } else {\n        \tint p;\n        \tcin>>p;\n          \
-    \  cout<<seg.get(p)<<en;\n        }\n    }\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_D\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/lazysegtree.hpp\"\
-    \n\nconst char en = '\\n';\nconst int inf = INT32_MAX;\n\nusing S = int;\nusing\
-    \ F = int;\nS op(S a,S b) { return a < b; }\nS e() { return inf; }\nS mapping(F\
-    \ f,S x) { return (f == inf ? x : f); }\nF composition(F f,F g) { return (f ==\
-    \ inf ? g : f); }\nF id() { return inf; }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
-    \    int n, q;\n    cin>>n>>q;\n    LazySegmentTree<S, op, e, F, mapping, composition,\
-    \ id> seg(n);\n    while(q--) {\n        int typ;\n        cin>>typ;\n       \
-    \ if(typ==0) {\n        \tint a, b, x;\n        \tcin>>a>>b>>x;\n            seg.apply(a,\
-    \ b+1, x);\n        } else {\n        \tint p;\n        \tcin>>p;\n          \
-    \  cout<<seg.get(p)<<en;\n        }\n    }\n    return 0;\n}"
+    \ 4 \"test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp\"\n#define PROBLEM \"\
+    https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G\"\nconst int INF = 1e9+7;\n\n\
+    struct S {\n    long long val;\n    int size;\n};\nusing F = long long;\n\nS op(S\
+    \ a, S b) { \n    return {a.val + b.val, a.size + b.size}; \n}\nS e() { return\
+    \ {0, 0}; }\nS mapping(F f, S x) {\n    return {x.val + f*x.size, x.size};\n}\n\
+    F composition(F f, F g) { return f+g; }\nF id() { return 0; }\n\nint main() {\n\
+    \    ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n    vector<S>\
+    \ v(n, {0, 1});\n    LazySegmentTree<S, op, e, F, mapping, composition, id> seg(v);\n\
+    \    while(q--) {\n        int typ, a, b;\n        cin>>typ>>a>>b;\n        if(typ==0)\
+    \ {\n            int x;\n            cin>>x;\n            seg.apply(a-1, b, x);\n\
+    \        } else {\n            cout<<seg.prod(a-1, b).val<<'\\n';\n        }\n\
+    \    }\n    return 0;\n}\n"
+  code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../segtree/lazysegtree.hpp\"\
+    \n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_G\"\nconst\
+    \ int INF = 1e9+7;\n\nstruct S {\n    long long val;\n    int size;\n};\nusing\
+    \ F = long long;\n\nS op(S a, S b) { \n    return {a.val + b.val, a.size + b.size};\
+    \ \n}\nS e() { return {0, 0}; }\nS mapping(F f, S x) {\n    return {x.val + f*x.size,\
+    \ x.size};\n}\nF composition(F f, F g) { return f+g; }\nF id() { return 0; }\n\
+    \nint main() {\n    ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n\
+    \    vector<S> v(n, {0, 1});\n    LazySegmentTree<S, op, e, F, mapping, composition,\
+    \ id> seg(v);\n    while(q--) {\n        int typ, a, b;\n        cin>>typ>>a>>b;\n\
+    \        if(typ==0) {\n            int x;\n            cin>>x;\n            seg.apply(a-1,\
+    \ b, x);\n        } else {\n            cout<<seg.prod(a-1, b).val<<'\\n';\n \
+    \       }\n    }\n    return 0;\n}"
   dependsOn:
   - segtree/lazysegtree.hpp
   isVerificationFile: true
-  path: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+  path: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
   requiredBy: []
   timestamp: '2022-12-31 21:40:17+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+documentation_of: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
-- /verify/test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp.html
-title: test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
+- /verify/test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
+- /verify/test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp.html
+title: test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
 ---

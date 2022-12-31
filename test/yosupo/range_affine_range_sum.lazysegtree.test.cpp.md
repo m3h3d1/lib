@@ -102,21 +102,21 @@ data:
     \                      sm = op(dat[r], sm);\n                        r--;\n  \
     \                  }\n                }\n                return r + 1 - size;\n\
     \            }\n            sm = op(dat[r], sm);\n        } while ((r & -r) !=\
-    \ r);\n        return 0;\n    }\n};\n// @docs segtree/lazysegtree.md\n#line 5\
-    \ \"test/yosupo/range_affine_range_sum.lazysegtree.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\n\nusing T = modular<998244353>;\n\
-    using S = pair<T, int>;\nusing F = pair<T, T>;\nS op(S a,S b) { return make_pair(a.first\
-    \ + b.first, a.second + b.second); }\nS e() { return make_pair(0, 0); }\nS mapping(F\
-    \ f,S x) { \n    return make_pair(f.first * x.first + f.second * x.second, x.second);\
-    \ \n}\nF composition(F f,F g) { \n    return make_pair(g.first * f.first, f.second\
-    \ + f.first * g.second); \n}\nF id() { return make_pair(1, 0); }\n\nint main()\
-    \ {\n    ios_base::sync_with_stdio(0);\n    int n, q;\n    cin>>n>>q;\n    vector<S>\
-    \ v(n);\n    for(auto &a: v) {\n        cin>>a.first;\n        a.second = 1;\n\
-    \    }\n    LazySegmentTree<S, op, e, F, mapping, composition, id> seg(v);\n \
-    \   while(q--) {\n        int typ, l, r;\n        cin>>typ>>l>>r;\n        if(typ==0)\
-    \ {\n            F x;\n            cin>>x.first>>x.second;\n            seg.apply(l,\
-    \ r, x);\n        } else {\n            cout<<seg.prod(l, r).first<<'\\n';\n \
-    \       }\n    }\n    return 0;\n}\n"
+    \ r);\n        return 0;\n    }\n};\n#line 5 \"test/yosupo/range_affine_range_sum.lazysegtree.test.cpp\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\n\
+    \nusing T = modular<998244353>;\nusing S = pair<T, int>;\nusing F = pair<T, T>;\n\
+    S op(S a,S b) { return make_pair(a.first + b.first, a.second + b.second); }\n\
+    S e() { return make_pair(0, 0); }\nS mapping(F f,S x) { \n    return make_pair(f.first\
+    \ * x.first + f.second * x.second, x.second); \n}\nF composition(F f,F g) { \n\
+    \    return make_pair(g.first * f.first, f.second + f.first * g.second); \n}\n\
+    F id() { return make_pair(1, 0); }\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \    int n, q;\n    cin>>n>>q;\n    vector<S> v(n);\n    for(auto &a: v) {\n \
+    \       cin>>a.first;\n        a.second = 1;\n    }\n    LazySegmentTree<S, op,\
+    \ e, F, mapping, composition, id> seg(v);\n    while(q--) {\n        int typ,\
+    \ l, r;\n        cin>>typ>>l>>r;\n        if(typ==0) {\n            F x;\n   \
+    \         cin>>x.first>>x.second;\n            seg.apply(l, r, x);\n        }\
+    \ else {\n            cout<<seg.prod(l, r).first<<'\\n';\n        }\n    }\n \
+    \   return 0;\n}\n"
   code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../mint.hpp\"\
     \n#include \"../../segtree/lazysegtree.hpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_range_sum\"\
     \n\nusing T = modular<998244353>;\nusing S = pair<T, int>;\nusing F = pair<T,\
@@ -138,7 +138,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 09:50:33+06:00'
+  timestamp: '2022-12-31 21:40:17+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
