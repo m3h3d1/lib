@@ -24,7 +24,7 @@ data:
       title: segtree/acl_segtree.hpp
     - icon: ':heavy_check_mark:'
       path: segtree/lazysegtree.hpp
-      title: segtree/lazysegtree.hpp
+      title: Lazy Segtree
     - icon: ':heavy_check_mark:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
