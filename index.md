@@ -6,6 +6,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: Union Find
+  - name: math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: math/extgcd.hpp
+      title: math/extgcd.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
@@ -25,7 +30,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: segtree/lazysegtree.hpp
       title: Lazy Segtree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
   - name: template
@@ -65,6 +70,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp
+      title: test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp
   - name: test/atcoder
     pages:
     - icon: ':x:'
