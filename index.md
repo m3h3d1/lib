@@ -30,7 +30,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: segtree/lazysegtree.hpp
       title: Lazy Segtree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
   - name: template
