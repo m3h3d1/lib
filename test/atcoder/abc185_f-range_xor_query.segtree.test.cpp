@@ -1,4 +1,6 @@
+#ifdef __clang__
 #define IGNORE
+#else
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../segtree/segtree.hpp"
