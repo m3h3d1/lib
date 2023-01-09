@@ -10,7 +10,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: math/extgcd.hpp
-      title: math/extgcd.hpp
+      title: Extgcd (extended Euclidean algorithm)
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
@@ -33,6 +33,11 @@ data:
     - icon: ':question:'
       path: segtree/segtree.hpp
       title: segtree/segtree.hpp
+  - name: string
+    pages:
+    - icon: ':question:'
+      path: string/rolling_hash.hpp
+      title: string/rolling_hash.hpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
@@ -46,6 +51,12 @@ data:
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj
     pages:
+    - icon: ':x:'
+      path: test/aoj/2444-Substring.hash.test.cpp
+      title: test/aoj/2444-Substring.hash.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
+      title: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
       title: test/aoj/DSL_2_A-RMQ.segtree.test.cpp

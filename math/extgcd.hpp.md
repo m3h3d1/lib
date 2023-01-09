@@ -27,8 +27,22 @@ data:
   - test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp
 documentation_of: math/extgcd.hpp
 layout: document
-redirect_from:
-- /library/math/extgcd.hpp
-- /library/math/extgcd.hpp.html
-title: math/extgcd.hpp
+title: Extgcd (extended Euclidean algorithm)
 ---
+
+# extgcd
+
+```
+T extgcd(T a, T b, T &x, T &y)
+```
+
+for $\gcd(a, b)$ returns $(x, y)$. Contains integer solutions that satisfy $ax + by = \gcd(a, b)$. If multiple integer solutions are possible, the one with the smallest $\|x\| + \|y\|$ is stored.
+
+
+## Constraint
+
+- $1 \leq a, b$
+
+## Complexity
+
+- $O(\log {\min(a, b)})$

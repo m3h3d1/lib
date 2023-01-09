@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: math/extgcd.hpp
-    title: math/extgcd.hpp
+    title: Extgcd (extended Euclidean algorithm)
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
