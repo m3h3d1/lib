@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../string/rollingHash2d.hpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_C"
 
 int main() {
     ios_base::sync_with_stdio(0);
