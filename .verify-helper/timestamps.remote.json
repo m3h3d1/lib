@@ -1,5 +1,6 @@
 {
 "ds/test/yosupo_unionfind.test.cpp": "2022-12-31 10:36:25 +0600",
+"test/aoj/2444-Substring.hash.test.cpp": "2023-01-10 03:21:22 +0600",
 "test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp": "2023-01-10 03:18:29 +0600",
 "test/aoj/DSL_2_A-RMQ.segtree.test.cpp": "2023-01-01 05:46:32 +0600",
 "test/aoj/DSL_2_B-RSQ.segtree.test.cpp": "2023-01-01 05:46:32 +0600",
