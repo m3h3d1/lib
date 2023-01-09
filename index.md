@@ -35,7 +35,7 @@ data:
       title: segtree/segtree.hpp
   - name: string
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: string/rolling_hash.hpp
       title: string/rolling_hash.hpp
   - name: template
@@ -51,7 +51,7 @@ data:
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/2444-Substring.hash.test.cpp
       title: test/aoj/2444-Substring.hash.test.cpp
     - icon: ':heavy_check_mark:'

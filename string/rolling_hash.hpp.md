@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/2444-Substring.hash.test.cpp
     title: test/aoj/2444-Substring.hash.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
     title: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"string/rolling_hash.hpp\"\n\nstruct RollingHash {\n    static\
@@ -50,7 +50,7 @@ data:
   path: string/rolling_hash.hpp
   requiredBy: []
   timestamp: '2023-01-10 03:18:29+06:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/2444-Substring.hash.test.cpp
   - test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
