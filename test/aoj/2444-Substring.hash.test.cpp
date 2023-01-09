@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../string/rolling_hash.hpp"
+#include "../../string/rollingHash.hpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/2444"
 #define ll long long
 
