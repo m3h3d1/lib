@@ -36,8 +36,11 @@ data:
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
-      path: string/rolling_hash.hpp
-      title: string/rolling_hash.hpp
+      path: string/rollingHash.hpp
+      title: string/rollingHash.hpp
+    - icon: ':x:'
+      path: string/rollingHash2d.hpp
+      title: string/rollingHash2d.hpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
@@ -55,8 +58,11 @@ data:
       path: test/aoj/2444-Substring.hash.test.cpp
       title: test/aoj/2444-Substring.hash.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
-      title: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
+      path: test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
+      title: test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
+    - icon: ':x:'
+      path: test/aoj/ALDS1_14_C-Pattern_Search.hash2d.test.cpp
+      title: test/aoj/ALDS1_14_C-Pattern_Search.hash2d.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
       title: test/aoj/DSL_2_A-RMQ.segtree.test.cpp

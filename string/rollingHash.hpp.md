@@ -7,14 +7,14 @@ data:
     path: test/aoj/2444-Substring.hash.test.cpp
     title: test/aoj/2444-Substring.hash.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
-    title: test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
+    path: test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
+    title: test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"string/rolling_hash.hpp\"\n\nstruct RollingHash {\n    static\
+  bundledCode: "#line 2 \"string/rollingHash.hpp\"\n\nstruct RollingHash {\n    static\
     \ constexpr int M = 2;\n    static constexpr long long MODS[M] = {999999937, 1000000007};\n\
     \    static constexpr long long BASE = 9973;\n    vector<long long> powb[M], hash[M];\n\
     \    int n;\n    RollingHash() {}\n    RollingHash(const string& str) { init(str);\
@@ -47,17 +47,17 @@ data:
     \  res &= rh1.get(l1, r1, k) == rh2.get(l2, r2, k);\n    }\n    return res;\n}"
   dependsOn: []
   isVerificationFile: false
-  path: string/rolling_hash.hpp
+  path: string/rollingHash.hpp
   requiredBy: []
-  timestamp: '2023-01-10 03:18:29+06:00'
+  timestamp: '2023-01-10 04:57:30+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/2444-Substring.hash.test.cpp
-  - test/aoj/ALDS1_14_B-String_Search.rolling_hash.test.cpp
-documentation_of: string/rolling_hash.hpp
+  - test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
+documentation_of: string/rollingHash.hpp
 layout: document
 redirect_from:
-- /library/string/rolling_hash.hpp
-- /library/string/rolling_hash.hpp.html
-title: string/rolling_hash.hpp
+- /library/string/rollingHash.hpp
+- /library/string/rollingHash.hpp.html
+title: string/rollingHash.hpp
 ---

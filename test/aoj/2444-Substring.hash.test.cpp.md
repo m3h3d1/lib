@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: string/rolling_hash.hpp
-    title: string/rolling_hash.hpp
+    path: string/rollingHash.hpp
+    title: string/rollingHash.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -15,7 +15,7 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/2444
   bundledCode: "#line 1 \"test/aoj/2444-Substring.hash.test.cpp\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n#line 2 \"string/rolling_hash.hpp\"\n\nstruct RollingHash\
+    using namespace std;\n#line 2 \"string/rollingHash.hpp\"\n\nstruct RollingHash\
     \ {\n    static constexpr int M = 2;\n    static constexpr long long MODS[M] =\
     \ {999999937, 1000000007};\n    static constexpr long long BASE = 9973;\n    vector<long\
     \ long> powb[M], hash[M];\n    int n;\n    RollingHash() {}\n    RollingHash(const\
@@ -40,7 +40,7 @@ data:
     \        } else {\n            r--;\n        }\n        assert(l>=0 && r>=0);\n\
     \        st.insert({rh.get(l, r+1, 0), rh.get(l, r+1, 1)});\n    }    \n    cout<<st.size()<<'\\\
     n';\n    return 0;\n}\n"
-  code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../string/rolling_hash.hpp\"\
+  code: "#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../string/rollingHash.hpp\"\
     \n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/2444\"\n#define\
     \ ll long long\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    string\
     \ str, s;\n    int n, q;\n    cin>>n>>q; cin.ignore();\n    getline(cin, str);\n\
@@ -51,11 +51,11 @@ data:
     \ assert(l>=0 && r>=0);\n        st.insert({rh.get(l, r+1, 0), rh.get(l, r+1,\
     \ 1)});\n    }    \n    cout<<st.size()<<'\\n';\n    return 0;\n}"
   dependsOn:
-  - string/rolling_hash.hpp
+  - string/rollingHash.hpp
   isVerificationFile: true
   path: test/aoj/2444-Substring.hash.test.cpp
   requiredBy: []
-  timestamp: '2023-01-10 03:21:22+06:00'
+  timestamp: '2023-01-10 04:57:30+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/2444-Substring.hash.test.cpp
