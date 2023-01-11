@@ -11,6 +11,7 @@
 "test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp": "2022-12-31 22:49:07 +0600",
 "test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp": "2022-12-31 22:49:07 +0600",
 "test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp": "2022-12-31 22:49:07 +0600",
+"test/aoj/GRL_5_C-LCA_Lowest_Common_Ancestor.lca.test.cpp": "2023-01-12 03:55:17 +0600",
 "test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp": "2023-01-07 03:52:29 +0600",
 "test/yosupo/predecessor_problem.segtree.test.cpp": "2023-01-01 05:46:32 +0600",
 "test/yosupo/range_affine_range_sum.lazysegtree.test.cpp": "2022-12-31 22:49:07 +0600",
