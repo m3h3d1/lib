@@ -6,6 +6,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: Union Find
+  - name: graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: graph/lca.hpp
+      title: graph/lca.hpp
   - name: math
     pages:
     - icon: ':heavy_check_mark:'
@@ -87,6 +92,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
       title: test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_5_C-LCA_Lowest_Common_Ancestor.lca.test.cpp
+      title: test/aoj/GRL_5_C-LCA_Lowest_Common_Ancestor.lca.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp
       title: test/aoj/NTL_1_E-Extended_Euclid_Algorithm.test.cpp
