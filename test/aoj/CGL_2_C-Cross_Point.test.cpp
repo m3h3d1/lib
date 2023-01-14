@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_D"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_C"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../geometry/2dSegmentAndLine.hpp"
@@ -11,12 +11,12 @@ int main() {
     while(q--) {
         Point p0, p1, p2, p3;
         cin>>p0>>p1>>p2>>p3;
-        Segment s1 = Segment(p0, p1);
-        Segment s2 = Segment(p2, p3);
+        Line l1 = Line(p0, p1);
+        Line l2 = Line(p2, p3);
 
-        Real d = distance_ss(s1, s2);
+        Point p = cross_point_ll(l1, l2);
 
-        cout<<fixed<<setprecision(12)<<d<<'\n';
+        cout<<p<<'\n';
     }
     return 0;
 }
