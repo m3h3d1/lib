@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../geometry/2dPointAndVector.hpp"
+#define ERROR 0.00000001
 
 int main() {
     ios_base::sync_with_stdio(0);

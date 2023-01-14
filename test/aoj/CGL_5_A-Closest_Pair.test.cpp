@@ -2,8 +2,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../geometry/2dPointSet.hpp"
+#define ERROR 0.000001
 
 int main() {
+    ios_base::sync_with_stdio(0);
     int n;
     cin>>n;
     Polygon ps(n);
