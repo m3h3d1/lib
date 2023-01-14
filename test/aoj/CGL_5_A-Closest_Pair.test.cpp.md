@@ -48,13 +48,13 @@ data:
     \  auto tar = ps[i] - a[pos - j - 1];\n                if (tar.imag() >= ret)\
     \ break;\n                ret = min(ret, abs(tar));\n            }\n         \
     \   a[pos++] = ps[i];\n        }\n        return ret;\n    };\n    return rec(0,\
-    \ (int)ps.size());\n}\n#line 5 \"test/aoj/CGL_5_A-Closest_Pair.test.cpp\"\n\n\n\
+    \ (int)ps.size());\n}\n#line 5 \"test/aoj/CGL_5_A-Closest_Pair.test.cpp\"\n\n\
     int main() {\n    ios_base::sync_with_stdio(0);\n    int n;\n    cin>>n;\n   \
     \ Polygon ps(n);\n    for(int i=0;i<n;++i) {\n        cin>>ps[i];\n    }\n   \
     \ cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\n';\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_5_A\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../geometry/2dPointSet.hpp\"\
-    \n\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n;\n    cin>>n;\n\
+    \n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n;\n    cin>>n;\n\
     \    Polygon ps(n);\n    for(int i=0;i<n;++i) {\n        cin>>ps[i];\n    }\n\
     \    cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\n';\n    return 0;\n}"
   dependsOn:
@@ -63,7 +63,7 @@ data:
   isVerificationFile: true
   path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
   requiredBy: []
-  timestamp: '2023-01-15 01:54:03+06:00'
+  timestamp: '2023-01-15 02:13:51+06:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/CGL_5_A-Closest_Pair.test.cpp
