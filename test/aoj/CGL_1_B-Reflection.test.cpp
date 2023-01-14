@@ -4,7 +4,6 @@ using namespace std;
 #include "../../geometry/2dPointAndVector.hpp"
 
 int main() {
-    ios_base::sync_with_stdio(0);
     Point p1, p2;
     cin>>p1>>p2;
     Line l = Line(p1, p2);
