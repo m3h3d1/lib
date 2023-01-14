@@ -3,7 +3,6 @@
 using namespace std;
 #include "../../geometry/2dPointSet.hpp"
 
-
 int main() {
     ios_base::sync_with_stdio(0);
     int n;
