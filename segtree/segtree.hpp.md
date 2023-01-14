@@ -107,10 +107,10 @@ data:
   timestamp: '2023-01-01 05:46:32+06:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/aoj/DSL_2_A-RMQ.segtree.test.cpp
   - test/aoj/DSL_2_B-RSQ.segtree.test.cpp
-  - test/yosupo/predecessor_problem.segtree.test.cpp
+  - test/aoj/DSL_2_A-RMQ.segtree.test.cpp
   - test/atcoder/abc185_f-range_xor_query.segtree.test.cpp
+  - test/yosupo/predecessor_problem.segtree.test.cpp
 documentation_of: segtree/segtree.hpp
 layout: document
 redirect_from:

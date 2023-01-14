@@ -52,8 +52,8 @@ data:
   timestamp: '2023-01-10 04:57:30+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/2444-Substring.hash.test.cpp
   - test/aoj/ALDS1_14_B-String_Search.hash.test.cpp
+  - test/aoj/2444-Substring.hash.test.cpp
 documentation_of: string/rollingHash.hpp
 layout: document
 redirect_from:

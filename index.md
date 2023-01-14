@@ -4,8 +4,25 @@ data:
   - name: ds
     pages:
     - icon: ':heavy_check_mark:'
+      path: ds/fenwickTree.hpp
+      title: ds/fenwickTree.hpp
+    - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: Union Find
+  - name: geometry
+    pages:
+    - icon: ':question:'
+      path: geometry/2dGeometryTemplate.hpp
+      title: geometry/2dGeometryTemplate.hpp
+    - icon: ':question:'
+      path: geometry/2dPointAndVector.hpp
+      title: geometry/2dPointAndVector.hpp
+    - icon: ':x:'
+      path: geometry/2dPointSet.hpp
+      title: geometry/2dPointSet.hpp
+    - icon: ':heavy_check_mark:'
+      path: geometry/2dSegmentAndLine.hpp
+      title: geometry/2dSegmentAndLine.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -68,9 +85,27 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/ALDS1_14_C-Pattern_Search.hash2d.test.cpp
       title: test/aoj/ALDS1_14_C-Pattern_Search.hash2d.test.cpp
+    - icon: ':x:'
+      path: test/aoj/CGL_1_A-Projection.test.cpp
+      title: test/aoj/CGL_1_A-Projection.test.cpp
+    - icon: ':x:'
+      path: test/aoj/CGL_1_B-Reflection.test.cpp
+      title: test/aoj/CGL_1_B-Reflection.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_C-CounterClockwise.test.cpp
+      title: test/aoj/CGL_1_C-CounterClockwise.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
+      title: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
+    - icon: ':x:'
+      path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
+      title: test/aoj/CGL_5_A-Closest_Pair.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
       title: test/aoj/DSL_2_A-RMQ.segtree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_B-RSQ.fenwick.test.cpp
+      title: test/aoj/DSL_2_B-RSQ.fenwick.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/DSL_2_B-RSQ.segtree.test.cpp
       title: test/aoj/DSL_2_B-RSQ.segtree.test.cpp

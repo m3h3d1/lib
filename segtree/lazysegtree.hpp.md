@@ -164,11 +164,11 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/DSL_2_I-RSQ and RUQ.lazysegtree.test.cpp
-  - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
-  - test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
   - test/aoj/DSL_2_H-RMQ_and_RAQ.lazysegtree.test.cpp
-  - test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+  - test/aoj/DSL_2_G-RSQ_and_RAQ.lazysegtree.test.cpp
   - test/aoj/DSL_2_F-RMQ_and_RUQ.lazysegtree.test.cpp
+  - test/aoj/DSL_2_E-RAQ.segtree.test.cpp
+  - test/aoj/DSL_2_D-RUQ.lazysegtree.test.cpp
   - test/yosupo/range_affine_range_sum.lazysegtree.test.cpp
 documentation_of: segtree/lazysegtree.hpp
 layout: document
