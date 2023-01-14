@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/CGL_1_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/CGL_2_A"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../geometry/2dSegmentAndLine.hpp"
