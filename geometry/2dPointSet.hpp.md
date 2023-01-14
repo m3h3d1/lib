@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dGeometryTemplate.hpp
     title: geometry/2dGeometryTemplate.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
     title: test/aoj/CGL_5_A-Closest_Pair.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"geometry/2dGeometryTemplate.hpp\"\n\nusing Real = double;\n\
@@ -63,7 +63,7 @@ data:
   path: geometry/2dPointSet.hpp
   requiredBy: []
   timestamp: '2023-01-15 01:54:03+06:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/CGL_5_A-Closest_Pair.test.cpp
 documentation_of: geometry/2dPointSet.hpp

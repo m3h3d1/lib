@@ -1,19 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dGeometryTemplate.hpp
     title: geometry/2dGeometryTemplate.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dPointSet.hpp
     title: geometry/2dPointSet.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    ERROR: '0.000001'
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/CGL_5_A
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/CGL_5_A
@@ -48,14 +49,16 @@ data:
     \  auto tar = ps[i] - a[pos - j - 1];\n                if (tar.imag() >= ret)\
     \ break;\n                ret = min(ret, abs(tar));\n            }\n         \
     \   a[pos++] = ps[i];\n        }\n        return ret;\n    };\n    return rec(0,\
-    \ (int)ps.size());\n}\n#line 5 \"test/aoj/CGL_5_A-Closest_Pair.test.cpp\"\n\n\
-    int main() {\n    int n;\n    cin>>n;\n    Polygon ps(n);\n    for(int i=0;i<n;++i)\
-    \ {\n        cin>>ps[i];\n    }\n    cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\\
-    n';\n    return 0;\n}\n"
+    \ (int)ps.size());\n}\n#line 5 \"test/aoj/CGL_5_A-Closest_Pair.test.cpp\"\n#define\
+    \ ERROR 0.000001\n\nint main() {\n    ios_base::sync_with_stdio(0);\n    int n;\n\
+    \    cin>>n;\n    Polygon ps(n);\n    for(int i=0;i<n;++i) {\n        cin>>ps[i];\n\
+    \    }\n    cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\n';\n    return\
+    \ 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_5_A\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../geometry/2dPointSet.hpp\"\
-    \n\nint main() {\n    int n;\n    cin>>n;\n    Polygon ps(n);\n    for(int i=0;i<n;++i)\
-    \ {\n        cin>>ps[i];\n    }\n    cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\\
+    \n#define ERROR 0.000001\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \    int n;\n    cin>>n;\n    Polygon ps(n);\n    for(int i=0;i<n;++i) {\n   \
+    \     cin>>ps[i];\n    }\n    cout<<fixed<<setprecision(20)<<closest_pair(ps)<<'\\\
     n';\n    return 0;\n}"
   dependsOn:
   - geometry/2dPointSet.hpp
@@ -63,8 +66,8 @@ data:
   isVerificationFile: true
   path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
   requiredBy: []
-  timestamp: '2023-01-15 02:17:43+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-15 02:23:33+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/CGL_5_A-Closest_Pair.test.cpp
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dGeometryTemplate.hpp
     title: geometry/2dGeometryTemplate.hpp
   _extendedRequiredBy:
@@ -9,10 +9,10 @@ data:
     path: geometry/2dSegmentAndLine.hpp
     title: geometry/2dSegmentAndLine.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_1_A-Projection.test.cpp
     title: test/aoj/CGL_1_A-Projection.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_1_B-Reflection.test.cpp
     title: test/aoj/CGL_1_B-Reflection.test.cpp
   - icon: ':heavy_check_mark:'
@@ -21,9 +21,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
     title: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"geometry/2dGeometryTemplate.hpp\"\n\nusing Real = double;\n\
@@ -67,7 +67,7 @@ data:
   requiredBy:
   - geometry/2dSegmentAndLine.hpp
   timestamp: '2023-01-15 01:54:03+06:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/CGL_1_C-CounterClockwise.test.cpp
   - test/aoj/CGL_1_A-Projection.test.cpp

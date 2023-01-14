@@ -1,19 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dGeometryTemplate.hpp
     title: geometry/2dGeometryTemplate.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dPointAndVector.hpp
     title: geometry/2dPointAndVector.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    ERROR: '0.00000001'
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/CGL_1_B
     links:
     - https://onlinejudge.u-aizu.ac.jp/problems/CGL_1_B
@@ -43,23 +44,25 @@ data:
     \ c)) == +1) return +1; // COUNTER_CLOCKWISE\n    if (sign(cross(b, c)) == -1)\
     \ return -1;// CLOCKWISE\n    if (sign(dot(b, c)) == -1) return +2; // ONLINE_BACK\n\
     \    if (norm(b) < norm(c)) return -2; // ONLINE_FRONT\n    return 0; // ON_SEGMENT\n\
-    }\n#line 5 \"test/aoj/CGL_1_B-Reflection.test.cpp\"\n\nint main() {\n    Point\
-    \ p1, p2;\n    cin>>p1>>p2;\n    Line l = Line(p1, p2);\n\n    int q;\n    cin>>q;\n\
-    \    while(q--) {\n        Point p;\n        cin>>p;\n        cout<<reflection(l,\
-    \ p)<<'\\n';\n    }\n    return 0;\n}\n"
+    }\n#line 5 \"test/aoj/CGL_1_B-Reflection.test.cpp\"\n#define ERROR 0.00000001\n\
+    \nint main() {\n    ios_base::sync_with_stdio(0);\n    Point p1, p2;\n    cin>>p1>>p2;\n\
+    \    Line l = Line(p1, p2);\n\n    int q;\n    cin>>q;\n    while(q--) {\n   \
+    \     Point p;\n        cin>>p;\n        cout<<reflection(l, p)<<'\\n';\n    }\n\
+    \    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/CGL_1_B\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../geometry/2dPointAndVector.hpp\"\
-    \n\nint main() {\n    Point p1, p2;\n    cin>>p1>>p2;\n    Line l = Line(p1, p2);\n\
-    \n    int q;\n    cin>>q;\n    while(q--) {\n        Point p;\n        cin>>p;\n\
-    \        cout<<reflection(l, p)<<'\\n';\n    }\n    return 0;\n}"
+    \n#define ERROR 0.00000001\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \    Point p1, p2;\n    cin>>p1>>p2;\n    Line l = Line(p1, p2);\n\n    int q;\n\
+    \    cin>>q;\n    while(q--) {\n        Point p;\n        cin>>p;\n        cout<<reflection(l,\
+    \ p)<<'\\n';\n    }\n    return 0;\n}"
   dependsOn:
   - geometry/2dPointAndVector.hpp
   - geometry/2dGeometryTemplate.hpp
   isVerificationFile: true
   path: test/aoj/CGL_1_B-Reflection.test.cpp
   requiredBy: []
-  timestamp: '2023-01-15 02:17:43+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-15 02:23:33+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/CGL_1_B-Reflection.test.cpp
 layout: document

@@ -2,20 +2,20 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dPointAndVector.hpp
     title: geometry/2dPointAndVector.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometry/2dPointSet.hpp
     title: geometry/2dPointSet.hpp
   - icon: ':heavy_check_mark:'
     path: geometry/2dSegmentAndLine.hpp
     title: geometry/2dSegmentAndLine.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_1_A-Projection.test.cpp
     title: test/aoj/CGL_1_A-Projection.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_1_B-Reflection.test.cpp
     title: test/aoj/CGL_1_B-Reflection.test.cpp
   - icon: ':heavy_check_mark:'
@@ -24,12 +24,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
     title: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
     title: test/aoj/CGL_5_A-Closest_Pair.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"geometry/2dGeometryTemplate.hpp\"\n\nusing Real = double;\n\
@@ -74,7 +74,7 @@ data:
   - geometry/2dSegmentAndLine.hpp
   - geometry/2dPointSet.hpp
   timestamp: '2023-01-15 01:54:03+06:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/CGL_1_C-CounterClockwise.test.cpp
   - test/aoj/CGL_1_A-Projection.test.cpp
