@@ -98,6 +98,15 @@ data:
       path: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
       title: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_B-Intersection.test.cpp
+      title: test/aoj/CGL_2_B-Intersection.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_C-Cross_Point.test.cpp
+      title: test/aoj/CGL_2_C-Cross_Point.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_D-Distance.test.cpp
+      title: test/aoj/CGL_2_D-Distance.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/CGL_5_A-Closest_Pair.test.cpp
       title: test/aoj/CGL_5_A-Closest_Pair.test.cpp
     - icon: ':heavy_check_mark:'

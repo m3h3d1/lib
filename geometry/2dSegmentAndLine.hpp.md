@@ -12,6 +12,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
     title: test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL_2_B-Intersection.test.cpp
+    title: test/aoj/CGL_2_B-Intersection.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL_2_C-Cross_Point.test.cpp
+    title: test/aoj/CGL_2_C-Cross_Point.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/CGL_2_D-Distance.test.cpp
+    title: test/aoj/CGL_2_D-Distance.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -78,7 +87,10 @@ data:
   timestamp: '2023-01-15 01:54:03+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/CGL_2_B-Intersection.test.cpp
+  - test/aoj/CGL_2_C-Cross_Point.test.cpp
   - test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
+  - test/aoj/CGL_2_D-Distance.test.cpp
 documentation_of: geometry/2dSegmentAndLine.hpp
 layout: document
 redirect_from:
