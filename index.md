@@ -33,6 +33,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/extgcd.hpp
       title: Extgcd (extended Euclidean algorithm)
+    - icon: ':heavy_check_mark:'
+      path: math/fastFactorize.hpp
+      title: math/fastFactorize.hpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
@@ -149,6 +152,9 @@ data:
       title: test/atcoder/abc185_f-range_xor_query.segtree.test.cpp
   - name: test/yosupo
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/factorize.test.cpp
+      title: test/yosupo/factorize.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/predecessor_problem.segtree.test.cpp
       title: test/yosupo/predecessor_problem.segtree.test.cpp
