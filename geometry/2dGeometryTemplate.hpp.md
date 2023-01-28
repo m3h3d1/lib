@@ -80,19 +80,19 @@ data:
   path: geometry/2dGeometryTemplate.hpp
   requiredBy:
   - geometry/2dPointAndVector.hpp
-  - geometry/2dSegmentAndLine.hpp
   - geometry/2dPointSet.hpp
+  - geometry/2dSegmentAndLine.hpp
   timestamp: '2023-01-15 01:54:03+06:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/CGL_1_C-CounterClockwise.test.cpp
   - test/aoj/CGL_1_A-Projection.test.cpp
-  - test/aoj/CGL_2_B-Intersection.test.cpp
-  - test/aoj/CGL_2_C-Cross_Point.test.cpp
+  - test/aoj/CGL_2_D-Distance.test.cpp
+  - test/aoj/CGL_1_C-CounterClockwise.test.cpp
   - test/aoj/CGL_5_A-Closest_Pair.test.cpp
   - test/aoj/CGL_2_A-ParallelOrthogonal.test.cpp
+  - test/aoj/CGL_2_B-Intersection.test.cpp
   - test/aoj/CGL_1_B-Reflection.test.cpp
-  - test/aoj/CGL_2_D-Distance.test.cpp
+  - test/aoj/CGL_2_C-Cross_Point.test.cpp
 documentation_of: geometry/2dGeometryTemplate.hpp
 layout: document
 redirect_from:

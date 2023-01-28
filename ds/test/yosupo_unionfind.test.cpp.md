@@ -22,18 +22,19 @@ data:
     typedef long long ll;\ntypedef pair<int,int> pii;\n#define all(v) (v).begin(),(v).end()\n\
     #define db(x) cerr<<__LINE__<<\": \"<<#x<<\" = \"<<(x)<<'\\n'\nconst char en =\
     \ '\\n';\nconst int inf = 1e9+7;\nconst int N = 1e6+9;\n#line 1 \"ds/union_find.hpp\"\
-    \nstruct DSU {\n\tvector<int> e;\n\tDSU(int n) { e = vector<int>(n, -1); }\n\n\
-    \t// get representive component (uses path compression)\n\tint get(int x) { return\
-    \ e[x] < 0 ? x : e[x] = get(e[x]); }\n\n\tbool same_set(int a, int b) { return\
-    \ get(a) == get(b); }\n\n\tint size(int x) { return -e[get(x)]; }\n\n\tbool unite(int\
-    \ x, int y) {  // union by size\n\t\tx = get(x), y = get(y);\n\t\tif (x == y)\
-    \ return false;\n\t\tif (e[x] > e[y]) swap(x, y);\n\t\te[x] += e[y]; e[y] = x;\
-    \ return true;\n\t}\n};\n#line 3 \"ds/test/yosupo_unionfind.test.cpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
-    \    int n, q, typ, u, v;\n    cin>>n>>q;\n    DSU dsu(n);\n    while(q--) {\n\
-    \    \tcin>>typ>>u>>v;\n    \tif(typ==0) {\n    \t\tdsu.unite(u, v);\n    \t}\
-    \ else {\n    \t\tcout<<dsu.same_set(u, v)<<'\\n';\n    \t}\n    }\n    return\
-    \ 0;\n}\n"
+    \nstruct DSU {\n    vector<int> e;\n    int cc; // connected components\n    DSU(int\
+    \ n): e(n, -1), cc(n) { }\n\n    // get representive component (uses path compression)\n\
+    \    int get(int x) { return e[x] < 0 ? x : e[x] = get(e[x]); }\n\n    bool same_set(int\
+    \ a, int b) { return get(a) == get(b); }\n\n    int size(int x) { return -e[get(x)];\
+    \ }\n\n    int groups() { return cc; } // number of groups\n\n    bool unite(int\
+    \ x, int y) {  // union by size\n        x = get(x), y = get(y);\n        if (x\
+    \ == y) return false;\n        cc--;\n        if (e[x] > e[y]) swap(x, y);\n \
+    \       e[x] += e[y]; e[y] = x; return true;\n    }\n};\n#line 3 \"ds/test/yosupo_unionfind.test.cpp\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main()\
+    \ {\n    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n    cin>>n>>q;\n\
+    \    DSU dsu(n);\n    while(q--) {\n    \tcin>>typ>>u>>v;\n    \tif(typ==0) {\n\
+    \    \t\tdsu.unite(u, v);\n    \t} else {\n    \t\tcout<<dsu.same_set(u, v)<<'\\\
+    n';\n    \t}\n    }\n    return 0;\n}\n"
   code: "#include \"../../template/template.hpp\"\n#include \"../union_find.hpp\"\n\
     #define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main() {\n\
     \    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n    cin>>n>>q;\n\
@@ -46,7 +47,7 @@ data:
   isVerificationFile: true
   path: ds/test/yosupo_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-12-31 10:36:25+06:00'
+  timestamp: '2023-01-28 23:01:04+06:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: ds/test/yosupo_unionfind.test.cpp
