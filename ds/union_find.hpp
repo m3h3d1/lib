@@ -13,7 +13,6 @@ struct DSU {
     int groups() { return cc; } // number of groups
 
     int leader(int v) const {
-        assert(0 <= a && a < _n);
         while (par[v] > -1) v = par[v];
         return v;
     }
