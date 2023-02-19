@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: ds/union_find.hpp
     title: Union Find
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
@@ -27,16 +27,16 @@ data:
     \ path compression)\n    int get(int x) { return par[x] < 0 ? x : par[x] = get(par[x]);\
     \ }\n\n    bool same_set(int a, int b) { return get(a) == get(b); }\n\n    int\
     \ size(int x) { return -par[get(x)]; }\n\n    int groups() { return cc; } // number\
-    \ of groups\n\n    int leader(int v) const {\n        assert(0 <= a && a < _n);\n\
-    \        while (par[v] > -1) v = par[v];\n        return v;\n    }\n\n    void\
-    \ unite(int x, int y) {  // union by size\n        x = get(x), y = get(y);\n \
-    \       if (x == y) return;\n        cc--;\n        if (par[x] > par[y]) swap(x,\
-    \ y);\n        par[x] += par[y]; par[y] = x;\n    }\n};\n#line 3 \"ds/test/yosupo_unionfind.test.cpp\"\
-    \n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main()\
-    \ {\n    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n    cin>>n>>q;\n\
-    \    DSU dsu(n);\n    while(q--) {\n    \tcin>>typ>>u>>v;\n    \tif(typ==0) {\n\
-    \    \t\tdsu.unite(u, v);\n    \t} else {\n    \t\tcout<<dsu.same_set(u, v)<<'\\\
-    n';\n    \t}\n    }\n    return 0;\n}\n"
+    \ of groups\n\n    int leader(int v) const {\n        while (par[v] > -1) v =\
+    \ par[v];\n        return v;\n    }\n\n    void unite(int x, int y) {  // union\
+    \ by size\n        x = get(x), y = get(y);\n        if (x == y) return;\n    \
+    \    cc--;\n        if (par[x] > par[y]) swap(x, y);\n        par[x] += par[y];\
+    \ par[y] = x;\n    }\n};\n#line 3 \"ds/test/yosupo_unionfind.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main() {\n    ios_base::sync_with_stdio(0);\n\
+    \    int n, q, typ, u, v;\n    cin>>n>>q;\n    DSU dsu(n);\n    while(q--) {\n\
+    \    \tcin>>typ>>u>>v;\n    \tif(typ==0) {\n    \t\tdsu.unite(u, v);\n    \t}\
+    \ else {\n    \t\tcout<<dsu.same_set(u, v)<<'\\n';\n    \t}\n    }\n    return\
+    \ 0;\n}\n"
   code: "#include \"../../template/template.hpp\"\n#include \"../union_find.hpp\"\n\
     #define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\nint main() {\n\
     \    ios_base::sync_with_stdio(0);\n    int n, q, typ, u, v;\n    cin>>n>>q;\n\
@@ -49,8 +49,8 @@ data:
   isVerificationFile: true
   path: ds/test/yosupo_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2023-02-20 02:23:17+06:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-02-20 02:34:23+06:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: ds/test/yosupo_unionfind.test.cpp
 layout: document

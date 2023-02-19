@@ -9,7 +9,7 @@ data:
     - icon: ':warning:'
       path: ds/fenwickTree_0indexed.hpp
       title: ds/fenwickTree_0indexed.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: Union Find
   - name: geometry
@@ -71,13 +71,13 @@ data:
       title: string/rollingHash2d.hpp
   - name: template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
   - name: ds/test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: ds/test/yosupo_unionfind.test.cpp
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj

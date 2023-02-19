@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: ds/test/yosupo_unionfind.test.cpp
     title: ds/test/yosupo_unionfind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"ds/union_find.hpp\"\nstruct DSU {\n    vector<int> par;\n\
@@ -17,27 +17,26 @@ data:
     \ { return par[x] < 0 ? x : par[x] = get(par[x]); }\n\n    bool same_set(int a,\
     \ int b) { return get(a) == get(b); }\n\n    int size(int x) { return -par[get(x)];\
     \ }\n\n    int groups() { return cc; } // number of groups\n\n    int leader(int\
-    \ v) const {\n        assert(0 <= a && a < _n);\n        while (par[v] > -1) v\
-    \ = par[v];\n        return v;\n    }\n\n    void unite(int x, int y) {  // union\
-    \ by size\n        x = get(x), y = get(y);\n        if (x == y) return;\n    \
-    \    cc--;\n        if (par[x] > par[y]) swap(x, y);\n        par[x] += par[y];\
-    \ par[y] = x;\n    }\n};\n"
+    \ v) const {\n        while (par[v] > -1) v = par[v];\n        return v;\n   \
+    \ }\n\n    void unite(int x, int y) {  // union by size\n        x = get(x), y\
+    \ = get(y);\n        if (x == y) return;\n        cc--;\n        if (par[x] >\
+    \ par[y]) swap(x, y);\n        par[x] += par[y]; par[y] = x;\n    }\n};\n"
   code: "struct DSU {\n    vector<int> par;\n    int cc; // connected components\n\
     \    DSU(int n): par(n, -1), cc(n) { }\n\n    // get representive component (uses\
     \ path compression)\n    int get(int x) { return par[x] < 0 ? x : par[x] = get(par[x]);\
     \ }\n\n    bool same_set(int a, int b) { return get(a) == get(b); }\n\n    int\
     \ size(int x) { return -par[get(x)]; }\n\n    int groups() { return cc; } // number\
-    \ of groups\n\n    int leader(int v) const {\n        assert(0 <= a && a < _n);\n\
-    \        while (par[v] > -1) v = par[v];\n        return v;\n    }\n\n    void\
-    \ unite(int x, int y) {  // union by size\n        x = get(x), y = get(y);\n \
-    \       if (x == y) return;\n        cc--;\n        if (par[x] > par[y]) swap(x,\
-    \ y);\n        par[x] += par[y]; par[y] = x;\n    }\n};"
+    \ of groups\n\n    int leader(int v) const {\n        while (par[v] > -1) v =\
+    \ par[v];\n        return v;\n    }\n\n    void unite(int x, int y) {  // union\
+    \ by size\n        x = get(x), y = get(y);\n        if (x == y) return;\n    \
+    \    cc--;\n        if (par[x] > par[y]) swap(x, y);\n        par[x] += par[y];\
+    \ par[y] = x;\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: ds/union_find.hpp
   requiredBy: []
-  timestamp: '2023-02-20 02:23:17+06:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-02-20 02:34:23+06:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - ds/test/yosupo_unionfind.test.cpp
 documentation_of: ds/union_find.hpp
