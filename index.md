@@ -5,8 +5,11 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: ds/fenwickTree.hpp
-      title: ds/fenwickTree.hpp
-    - icon: ':heavy_check_mark:'
+      title: Fenwick Tree
+    - icon: ':warning:'
+      path: ds/fenwickTree_0indexed.hpp
+      title: ds/fenwickTree_0indexed.hpp
+    - icon: ':x:'
       path: ds/union_find.hpp
       title: Union Find
   - name: geometry
@@ -68,13 +71,13 @@ data:
       title: string/rollingHash2d.hpp
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
   - name: ds/test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: ds/test/yosupo_unionfind.test.cpp
       title: ds/test/yosupo_unionfind.test.cpp
   - name: test/aoj
