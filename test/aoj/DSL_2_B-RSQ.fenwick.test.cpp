@@ -15,13 +15,11 @@ int main() {
         if(typ==0) {
             int id, x;
             cin>>id>>x;
-            id--;
             ft.add(id, x);
         } else {
             int a, b;
             cin>>a>>b;
-            a--, b--;
-            cout<<ft.sum(a, b+1)<<'\n';
+            cout<<ft.sum(a, b)<<'\n';
         }
     }
     return 0;
