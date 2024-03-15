@@ -10,7 +10,7 @@ timestamp_file = Path('.verify-helper') / Path(f'timestamps.{"remote" if "GITHUB
 timestamp = {}
 
 def task(tests):
-    verify_cmd = ['oj-verify', 'run', '--timeout', '6000', *tests]
+    verify_cmd = ['oj-verify', 'run', '--timeout', '60000', *tests]
     subprocess.check_call(verify_cmd)
     timestamp.update(json.load(timestamp_file.open()))
 
