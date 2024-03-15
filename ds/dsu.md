@@ -1,9 +1,9 @@
 ---
-title: Union Find
-documentation_of: ./union_find.hpp
+title: DSU
+documentation_of: ./dsu.hpp
 ---
 
-## Union-Find Tree(Disjoint Set Union)
+## DSU(Disjoint Set Union)
 
 #### overview
 
