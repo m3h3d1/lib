@@ -21,9 +21,9 @@ struct DSU {
     /** @return whether the merge changed connectivity */
     bool unite(int x, int y) {  // union by size
         x = get(x), y = get(y);
-        if (x == y) return false;
+        if(x == y) return false;
         cc--;
-        if (par[x] > par[y]) swap(x, y);
+        if(par[x] > par[y]) swap(x, y);
         par[x] += par[y]; par[y] = x;
         return true;
     }
