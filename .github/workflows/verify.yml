@@ -73,6 +73,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Restore cached results
+        if: ${{ !inputs.ignore_prev_result }}
+        uses: actions/cache/restore@v4
+        id: restore-cached-results
+        with:
+          path: ${{github.workspace}}/merged-result.json
+          key: ${{ runner.os }}-verify-result-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-verify-result-
+
       - name: Download verify_files.json
         uses: competitive-verifier/actions/download-verify-artifact@v1
 
@@ -82,17 +92,18 @@ jobs:
           cache-pip: true
 
       - name: Verify
-        uses: competitive-verifier/actions/verify@v1
+        uses: competitive-verifier/actions/verify@v2
         with:
           destination: ${{runner.temp}}/result.json
           split-size: ${{ env.SPLIT_SIZE }}
           split-index: ${{ matrix.index }}
           timeout: 1800
+          prev-result: ${{ steps.restore-cached-results.outputs.cache-hit && 'merged-result.json' || ''}}
         env:
           YUKICODER_TOKEN: ${{secrets.YUKICODER_TOKEN}}
 
       - name: Upload result artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Result-${{ runner.os }}-${{ matrix.index }}
           path: ${{runner.temp}}/result.json
@@ -110,7 +121,7 @@ jobs:
   
       - name: Download verify_files.json and all artifacts
         id: all-artifacts
-        uses: competitive-verifier/actions/download-verify-artifact@v1
+        uses: competitive-verifier/actions/download-verify-artifact@v2
         with:
           download-all: true
           artifact-root: .artifacts/
@@ -129,24 +140,39 @@ jobs:
           SRCDIR: .artifacts/Bundled-${{ runner.os }}
   
       - name: Set up competitive-verifier
-        uses: competitive-verifier/actions/setup@v1
+        uses: competitive-verifier/actions/setup@v2
         with:
           cache-pip: true
 
+      - name: Merge results
+        uses: competitive-verifier/actions/merge-result@v2
+        with:
+          result-files: ${{ steps.all-artifacts.outputs.artifacts-root }}/Result-*/result.json
+          output-path: ${{github.workspace}}/merged-result.json
+
       - name: Docs
-        uses: competitive-verifier/actions/docs@v1
+        uses: competitive-verifier/actions/docs@v2
         with:
           verify-result: ${{ steps.all-artifacts.outputs.artifacts-root }}/Result-*/result.json
           destination: _jekyll
           write-summary: true
 
+      - name: Save result
+        if: ${{ contains(fromJSON('["push", "workflow_dispatch"]'), github.event_name) }}
+        uses: actions/cache/save@v4
+        with:
+          path: ${{github.workspace}}/merged-result.json
+          key: ${{ runner.os }}-verify-result-${{ github.sha }}
+
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
+      
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: _jekyll
           destination: _site
+      
       - name: Upload artifact
         id: upload-pages
         uses: actions/upload-pages-artifact@v2
