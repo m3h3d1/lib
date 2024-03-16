@@ -24,5 +24,5 @@
 "library/test/yosupo/factorize.test.cpp": "2024-03-15 16:55:35 +0600",
 "library/test/yosupo/predecessor_problem.segtree.test.cpp": "2024-03-15 16:42:38 +0600",
 "library/test/yosupo/range_affine_range_sum.lazysegtree.test.cpp": "2024-03-15 16:42:38 +0600",
-"library/test/yosupo/unionfind.test.cpp": "2024-03-15 16:42:38 +0600"
+"library/test/yosupo/unionfind.test.cpp": "2024-03-16 16:49:28 +0600"
 }
