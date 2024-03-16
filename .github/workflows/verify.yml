@@ -38,12 +38,12 @@ jobs:
           # If you have config.toml
           config: .competitive-verifier/config.toml
       - name: parse-doxygen
-        uses: competitive-verifier/actions/parse-doxygen@v1
+        uses: competitive-verifier/actions/parse-doxygen@v2
         with:
           verify-files: verify_files.json
 
       - name: Upload verify_files.json
-        uses: competitive-verifier/actions/upload-verify-artifact@v1
+        uses: competitive-verifier/actions/upload-verify-artifact@v2
         with:
           file: verify_files.json
 
@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "count=$(find .competitive-verifier/bundled/ -type f | wc -l)" >> $GITHUB_OUTPUT
       - name: Upload bundled
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: steps.test-bundled.outputs.count > 0
         with:
           name: Bundled-${{ runner.os }}
@@ -153,7 +153,8 @@ jobs:
       - name: Docs
         uses: competitive-verifier/actions/docs@v2
         with:
-          verify-result: ${{ steps.all-artifacts.outputs.artifacts-root }}/Result-*/result.json
+          # verify-result: ${{ steps.all-artifacts.outputs.artifacts-root }}/Result-*/result.json
+          verify-result: ${{github.workspace}}/merged-result.json
           destination: _jekyll
           write-summary: true
 
