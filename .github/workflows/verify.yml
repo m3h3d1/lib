@@ -5,34 +5,35 @@ on: push
 jobs:
   verify:
     runs-on: ubuntu-latest
-    
+
     steps:
-#     - name: update
-#       run: sudo apt-get update
-    
-    - uses: actions/checkout@v1 # use checkout@v1 for oj-verify's timestamp
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GH_PAT }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
-
-    - name: Install boost
-      run: sudo apt install -y libboost-dev
+      with:
+        python-version: '3.8'
 
     - name: Install dependencies
-      run: pip3 install -U online-judge-verify-helper
+      run: |
+        git clone --depth=1 https://github.com/rainbou-kpr/verification-helper.git ~/verification-helper
+        pip3 install ~/verification-helper
 
-    - name: Cache test cases
-      uses: actions/cache@v3
-      with:
-        path: ./.verify-helper/cache
-        key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/*.test.cpp') }}
-        restore-keys: |
-          ${{ runner.os }}-verify-helper-
-    
+    - name: Get Dropbox token
+      env:
+        DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+        DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+        DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+      run: echo DROPBOX_TOKEN=$(curl https://api.dropbox.com/oauth2/token -d grant_type=refresh_token -d refresh_token=$DROPBOX_REFRESH_TOKEN -u $DROPBOX_APP_KEY:$DROPBOX_APP_SECRET | jq -r '.access_token') >> $GITHUB_ENV
+
     - name: Run tests
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
-        DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
-      run: oj-verify all
+      run: |
+        echo "Number of processors: $(nproc)"
+        oj-verify all -j $(nproc) --timeout=6000

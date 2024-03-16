@@ -1,6 +1,7 @@
 .verify-helper/_config.toml
 library/experimental
 library/test/experimental
+.bak
 
 # Compiled Object files
 *.slo
