@@ -1,0 +1,76 @@
+name: Build & Relase LaTeX document
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:    
+
+concurrency:
+  group: ${{ github.head_ref || 'x' }}-${{ github.workflow }}-${{ github.ref }}-pdf
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Generate TeX files
+        run: |
+          pip install -r requirements.txt
+          python manager.py -l DEBUG gen-cs
+          python manager.py -l DEBUG gen-nb
+      - name: Run test codes
+        run: |
+          python manager.py -l DEBUG test
+      - name: Build the LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -8bit"
+          extra_system_packages: |
+            unzip
+            wget
+            python3
+            py3-pygments
+            inkscape
+          pre_compile: |
+            wget -q -O fira.zip "https://github.com/mozilla/Fira/archive/refs/tags/4.106.zip"
+            wget -q -O firacode.zip "https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip"
+            wget -q -O notosans.zip "https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-hinted.zip"
+            wget -q -O notosanscjk.zip "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip"
+            wget -q "https://mirror.math.princeton.edu/pub/CTAN/fonts/cm-unicode.zip"
+            unzip -q fira.zip -d fira
+            unzip -q firacode.zip -d firacode
+            unzip -q notosans.zip -d notosans
+            unzip -q notosanscjk.zip -d notosanscjk
+            unzip -q ./cm-unicode.zip
+            for i in woff2 ttf; do cp -r fira/Fira-4.106/$i /usr/share/fonts/$i; done
+            for i in woff2 ttf; do cp -r firacode/$i /usr/share/fonts/$i; done
+            cp -r notosans notosanscjk cm-unicode/fonts/otf/* /usr/share/fonts
+            fc-cache -f
+          root_file: notebook.tex
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: result
+          path: notebook.pdf
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ github.token }}
+          file: notebook.pdf
+          tag: ${{ github.ref }}
+          file_glob: true
+          overwrite: true
