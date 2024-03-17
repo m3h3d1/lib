@@ -26,7 +26,7 @@ jobs:
           cache: 'pip'
       - name: Generate TeX files
         run: |
-          pip install -r others/requirements_document.txt
+          pip install -r requirements.txt
           python manager.py -l DEBUG gen-cs
           python manager.py -l DEBUG gen-nb
       - name: Run test codes
