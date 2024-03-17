@@ -3,10 +3,10 @@ name: Build & Relase LaTeX document
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:    
 
 concurrency:
@@ -26,7 +26,7 @@ jobs:
           cache: 'pip'
       - name: Generate TeX files
         run: |
-          pip install -r requirements.txt
+          pip install -r others/requirements_document.txt
           python manager.py -l DEBUG gen-cs
           python manager.py -l DEBUG gen-nb
       - name: Run test codes
