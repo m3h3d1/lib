@@ -1,4 +1,4 @@
 exclude: ["ac-library", "scripts/"]
 title: 📚Library
 theme: jekyll-theme-hacker
-highlightjs-style: rouge
+color-scheme: dark
