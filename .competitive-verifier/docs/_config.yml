@@ -1,3 +1,8 @@
 exclude: ["ac-library", "scripts/"]
 title: 📚Library
 theme: jekyll-theme-hacker
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
