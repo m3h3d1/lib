@@ -1,0 +1,25 @@
+name: clang-format
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # https://apt.llvm.org/
+    - name: Install clang-format-16
+      run: |
+        wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+        sudo add-apt-repository 'deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-16 main'
+        sudo apt-get update
+        sudo apt-get install -y clang-format-16
+
+    - name: Check formatting
+      run: find ./ -name "*.hpp" -o -name "*.cpp" -not -iwholename "others*" | xargs clang-format-16 --dry-run --Werror -style=file
