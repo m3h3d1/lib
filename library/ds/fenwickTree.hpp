@@ -4,7 +4,7 @@ template <class T> struct FenwickTree { // 1 indexed
     int n;
     vector<T> data;
     FenwickTree() : n(0) {}
-    FenwickTree(int n) : n(n), data(n+1, 0) {}
+    FenwickTree(int n) : n(n), data(n + 1, 0) {}
 
     // a[id] += x and all the ranges responsible for 'id', O(log(n))
     // x = i&-i => lsb(x); lsb(0b1101000) = 0b1000 = 8
@@ -27,7 +27,5 @@ template <class T> struct FenwickTree { // 1 indexed
         return s;
     }
     // [l, r]
-    T sum(int l, int r) {
-        return sum(r) - sum(l-1);
-    }
+    T sum(int l, int r) { return sum(r) - sum(l - 1); }
 };

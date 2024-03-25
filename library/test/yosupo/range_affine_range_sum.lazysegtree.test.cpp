@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../mint.hpp"
+#include "../../mod/mint.hpp"
 #include "../../segtree/lazysegtree.hpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/range_affine_range_sum"
 

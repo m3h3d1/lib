@@ -1,5 +1,5 @@
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/m3h3d1/lib/verify.yml?logo=github)](https://github.com/m3h3d1/lib/actions)
 [![GitHub deployments](https://img.shields.io/github/deployments/m3h3d1/lib/github-pages?label=pages+state&logo=github)](https://lib.m3h3d1.com/)
-![Code Size](https://img.shields.io/github/languages/code-size/m3h3d1/CP-lib)
+![Code Size](https://img.shields.io/github/languages/code-size/m3h3d1/lib)
 ![Standard](https://img.shields.io/static/v1?label=standard&message=C%2B%2B20+with+O2&color=green&logo=cplusplus)
 ![Requirments](https://img.shields.io/static/v1?label=requirments&message=GCC+>=12&color=blue&logo=cplusplus)
